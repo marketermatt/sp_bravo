@@ -1,0 +1,1151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+
+	<tab>
+
+		<general>
+
+			<panel title="Site General">
+
+				<wrapper title="Site Layout">
+
+					<module title="Site Layout" desc="Select the site layout you want to display." id="site_layout" std="full" type="radio_module" option="full,boxed" />
+
+					<module title="Show Top Bar" desc="Turn on to show a 30 pixels top bar that in turn show your social media profile icons." id="show_top_bar" std="on" type="radio_module" option="on,off" />
+
+					<module title="Back to Top Link" desc="Turn on to show a back to top link/button when a page is scrolled down a certain percentage.  It takes the user back to the top of the page when clicked." id="back_to_top" std="on" type="radio_module" option="on,off" />
+
+					<module title="Show Breadcrumbs" desc="Turn on to show breadcrumbs on pages." id="show_page_breadcrumbs" std="on" type="radio_module" option="on,off" />
+
+				</wrapper>
+
+				<wrapper title="Header Section">
+
+					<module title="Navigation Scroll Follow" desc="Turn on to enable the navigation section to always be visible on the screen even when scrolling down the page." id="navigation_scroll_follow" std="on" type="radio_module" option="on,off" />
+
+					<module />
+
+				</wrapper>
+
+				<wrapper title="Footer Section">
+
+					<module title="Show Phone Number" desc="Turn on show your contact phone in the footer bar.  This is mobile friendly as mobile users can tap the phone number and would automatically dialed it." id="show_footer_phone" std="on" type="radio_module" option="on,off" />
+
+					<module title="Phone Number" desc="Enter your contact phone number." id="footer_phone" std="888.888.8888" type="text_module" />
+
+				</wrapper>
+
+				<wrapper title="Search">
+
+					<module title="Display Search" desc="Turn on to display search icon and field." id="display_search" std="on" type="radio_module" option="on,off" />
+
+					<module title="Search Context" desc="Select the items you would like to search for when users types into the search fields. Setting it to all will search everything on the site but be warned that this is not always recommended as it may break the styling.  And smart-search will search for products when in product context and search for blog posts when in blog context." id="search_type" std="smart-search" type="select_module" option="all,smart-search,products-only,blog-only" />
+
+				</wrapper>
+
+				<wrapper title="Theme and Framework Update Notification">
+				
+					<module title="Display Update Notification" desc="Turn on to show the system theme and framework update notification." id="update_notification" std="on" type="radio_module" option="on,off" />
+					
+					<module />
+				
+				</wrapper>	
+
+				<wrapper title="Sample Data">
+				
+					<module title="Install Sample Data" desc="Click on the button to install sample data to your site.  This is recommended to be used on a fresh installed site with no content." id="sample_data" std="" type="button_module" link="self" link_text="Install Sample Data" class="install-sample-data" />
+					
+					<module />
+				
+				</wrapper>	
+
+			</panel>
+
+			<panel title="Mobile Settings">
+
+				<wrapper title="Mobile Settings">
+					
+					<module title="Mobile Zooming" desc="Turn on to enable zooming capabilities on mobile devices (default is ON).  Turning this off will fix the issue of when the device is rotated, the site is initially zoomed in effect. When off, it will also prevent users from pinch to zoom." id="mobile_zoom" std="on" type="radio_module" option="on,off" />
+
+					<module title="Hide Left Right Sidebars in Small Mobile Devices" desc="Turn on to hide sidebars on small mobile devices that have a resolution less than 768 pixels." id="hide_sidebars_on_xs_mobile" std="on" type="radio_module" option="on,off" />
+
+					<module title="Hide Footer Sidebars/Widgets in Small Mobile Devices" desc="Turn on to hide footer sidebars on small mobile devices that have a resolution less than 768 pixels." id="hide_footer_sidebars_on_xs_mobile" std="on" type="radio_module" option="on,off" />
+
+					<module title="Hide Sliders in Small Mobile Devices" desc="Turn on to hide all sliders on small mobile devices such as mobile phones to give better performance and userability." id="hide_sliders_on_xs_mobile" std="off" type="radio_module" option="on,off" />
+
+				</wrapper>
+
+				<wrapper />
+				
+			</panel>
+
+			<panel title="Sidebar Layouts">
+
+				<wrapper title="Sitewide Sidebars">
+
+					<module title="Enable Sitewide Sidebars" desc="Turn on to enable sitewide sidebars left and right to be available for widgets.  This is a global setting.  You may override this per page/post." id="sitewide_sidebars_enable" std="on" type="radio_module" option="on,off" />
+					
+					<module />
+
+				</wrapper>	
+
+				<wrapper title="Sidebar Layout on Product Category and Product Archive Pages" context="woo">
+					
+					<module title="Info" desc="This is the sidebar layout settings for product category and product archive pages." id="" std="" type="info_module" />
+
+					<module title="Sidebar Orientation" desc="Select the sidebar orientation you want to display." id="category_product_sidebar_orientation" std="sidebar-right" type="select_module" option="sidebar-left,sidebar-right,both-sidebars,no-sidebars" />
+					
+				</wrapper>
+			
+				<wrapper title="Sidebar Layout on Product Single Detail Page" context="woo">
+					
+					<module title="Info" desc="This is the sidebar layout settings for a single product detail page." id="" std="" type="info_module" />
+
+					<module title="Sidebar Orientation" desc="Select the sidebar orientation you want to display. We recommend no sidebars for this page." id="single_product_sidebar_orientation" std="no-sidebars" type="select_module" option="sidebar-left,sidebar-right,both-sidebars,no-sidebars" />
+					
+				</wrapper>
+
+				<wrapper title="Sidebar Layout on Blog">
+
+					<module title="Info" desc="This is the sidebar layout settings for your blog category pages.  You can always override this setting per page level giving you even finer control." id="" std="" type="info_module" />
+
+					<module title="Sidebar Orientation" desc="Select the sidebar orientation you want to display." id="blog_sidebar_orientation" std="sidebar-right" type="select_module" option="sidebar-left,sidebar-right,both-sidebars,no-sidebars" />
+					
+				</wrapper>
+
+				<wrapper title="Sidebar Layout on Pages">
+					
+					<module title="Info" desc="This is the sidebar layout settings for your page.  You can always override this setting per page level giving you even finer control." id="" std="" type="info_module" />
+
+					<module title="Sidebar Orientation" desc="Select the sidebar orientation you want to display." id="page_sidebar_orientation" std="sidebar-right" type="select_module" option="sidebar-left,sidebar-right,both-sidebars,no-sidebars" />
+					
+				</wrapper>
+
+				<wrapper title="Sidebar Layout on Portfolio">
+					
+					<module title="Info" desc="This is the sidebar layout settings for your portfolio page.  You can always override this setting per page level giving you even finer control." id="" std="" type="info_module" />
+
+					<module title="Sidebar Orientation" desc="Select the sidebar orientation you want to display." id="portfolio_sidebar_orientation" std="sidebar-right" type="select_module" option="sidebar-left,sidebar-right,both-sidebars,no-sidebars" />
+					
+				</wrapper>
+
+			</panel>
+
+			<panel title="Blog">
+
+				<wrapper title="Related Post Custom Text">
+				
+					<module title="Show Related Posts" desc="Turn on to display related posts in the single post page" id="show_related_posts" std="on" type="radio_module" option="on,off" />
+					
+					<module title="Custom Text" desc="Enter the custom title text you would like to show for the Related Post section. (default Related Posts)" id="related_post_text" std="Related Posts" type="text_module" />
+					
+				</wrapper>
+
+				<wrapper title="Pagination">
+
+					<module title="Select Pagination Style" desc="Select the type of pagination style you want for your blog posts. One is paginated by numeration and the other is by next and previous post or posts.  You can also turn all pagination off. (default is numeration)" id="blog_pagination" std="numeration" type="select_module" option="next-previous,numeration,no-pagination" />
+					
+					<module />
+
+				</wrapper>
+				
+			</panel>
+			
+			<panel title="Social Media">
+
+				<wrapper title="Icon Profile Links">
+
+					<module title="Show Social Media Profile Icons" desc="Turn on to show social media profile icons on the top bar." id="show_social_media_icons" std="on" type="radio_module" option="on,off" />
+
+					<module title="Enable RSS Icon" desc="Turn on to show the RSS icon and will be link to the feeds." id="rss_enable" std="on" type="radio_module" option="on,off" />
+
+					<module title="RSS Feed URL" desc="(Optional) Enter the RSS feed URL if you're not using the WordPress standard feeds. (i.e. Google Feed Burner). This will redirect your feed URL site wide to the one you have set." id="rss_url" std="" type="text_module" />
+					
+					<module title="Enable Google Plus Icon" desc="Turn on to show your Google Plus icon on the site which will link to your Google profile set below." id="gplus_enable" std="on" type="radio_module" option="on,off" />
+					
+					<module title="Google Plus Profile URL" desc="Enter your Google Plus Profile URL (i.e http://plus.google.com/115445554083854323481)." id="gplus_account" std="" type="text_module" />
+
+					<module title="Enable Facebook Icon" desc="Turn on to show your Facebook icon on the site which will link to your Facebook profile set below." id="facebook_enable" std="on" type="radio_module" option="on,off" />
+
+					<module title="Facebook Account" desc="Enter your Facebook account name (i.e. http://facebook.com/splashingpixels)." id="facebook_account" std="" type="text_module" />		
+
+					<module title="Twitter" desc="Turn on to show your Twitter icon on the site which will link to your Twitter profile set below." id="twitter_enable" std="on" type="radio_module" option="on,off" />
+					
+					<module title="Twitter Account" desc="Enter your Twitter account name (i.e. http://twitter.com/splashingpixels).." id="twitter_account" std="" type="text_module" />	
+
+					<module title="Pinterest Icon" desc="Turn on to show your Pininterest icon on the site which will link to your Pinterest profile set below." id="pinterest_enable" std="off" type="radio_module" option="on,off" />
+					
+					<module title="Pinterest Profile Name" desc="Enter your Pinterest Profile URL (i.e http://pinterest.com/splashingpixels/)." id="pinterest_account" std="" type="text_module" />	
+
+					<module title="Flickr Icon" desc="Turn on to show your Flickr icon on the site which will link to your Flickr profile set below." id="flickr_enable" std="off" type="radio_module" option="on,off" />
+					
+					<module title="Flickr Account" desc="Enter your Flickr account name (i.e. http://flickr.com/photos/splashingpixels)." id="flickr_account" std="" type="text_module" />	
+
+					<module title="YouTube Icon" desc="Turn on to show your Youtube icon on the site which will link to your Youtube profile set below." id="youtube_enable" std="off" type="radio_module" option="on,off" />
+					
+					<module title="YouTube Profile Name" desc="Enter your YouTube Profile URL (i.e http://youtube.com/user/splashingpixels/)." id="youtube_account" std="" type="text_module" />																				
+
+				</wrapper>
+
+				<wrapper title="Facebook Open Graph">
+
+					<module title="Facebook Open Graph" desc="Turn on to enable Facebook Open Graph feature where if someone clicks on your LIKE button, your page information - including the image will be displayed on their Facebook page.  This is used to further improve your social marketing outreach." id="facebook_opengraph" std="off" type="radio_module" option="on,off" />
+					
+					<module title="App ID" desc="Enter the ID of the app" id="facebook_opengraph_app_id" std="" type="text_module" />
+					
+					<module title="Admin ID" desc="Enter the ID of the admin for the Facebook page" id="facebook_opengraph_admin_id" std="" type="text_module" />
+
+				</wrapper>
+							
+			</panel>
+
+			<panel title="Widgets">			
+
+				<wrapper title="Footer Widgets">
+
+					<module title="Footer Widget Area" desc="Select how many columns you want to display for your footer widget area.  This area is usually in the footer area above the copyright footer." id="footer_widget_area_columns" std="4" type="select_module" option="1,2,3,4,6" />
+
+					<module />
+
+				</wrapper>	
+
+				<wrapper title="Custom Page Widgets">
+
+					<module title="widget settings." desc="You can add custom widget areas to a specific page. This will allow you to have different widgets depending on the page you're on. Once you have generated all the widgets, you will see new widget areas in the" type="link_module" link="widgets.php" context="url" />
+
+					<module title="" desc="Please note that this only applies to pages with default editor and does not work with Advanced Page Builder.  You can create your own widget areas on the page when using Advanced Page Builder." type="info_module" />
+
+					<module title="Create Widgets for Page" desc="Select the page you want to create custom widgets for." id="custom_page_widget" std="" type="custom_page_widget_module" />
+					
+				</wrapper>				
+
+				<wrapper title="Custom Blog Category Widgets">
+
+					<module title="widget settings." desc="You can add custom widget areas to a specific blog category. This will allow you to have different widgets depending on the blog category you're on. Once you have generated all the widgets, you will see new widget areas in the" type="link_module" link="widgets.php" context="url" />
+
+					<module title="Create Widgets for Blog Category" desc="Select the blog category you want to create custom widgets for" id="custom_blog_category_widget" std="" type="custom_blog_category_widget_module" />
+					
+				</wrapper>				
+
+				<wrapper title="Custom Product Category Widgets" context="woo">
+
+					<module title="widget settings." desc="You can add custom widget areas to a specific product category. This will allow you to have different widgets depending on the product category you're on. Once you have generated all the widgets, you will see new widget areas in the" type="link_module" link="widgets.php" context="url" />				
+
+					<module title="Create Widgets for Product Category" desc="Select the product category you want to create custom widgets for" id="custom_product_category_widget" std="" type="custom_product_category_widget_module" />
+
+				</wrapper>						
+					
+			</panel>
+
+			<panel title="Admin Login">
+
+				<wrapper title="Backend Admin Logo">
+
+					<module title="Backend Admin Logo" desc="Upload a logo you want to display on top of the login form.  The recommended size of the logo should not exceed 323x67 pixels." id="admin_login_logo" std="" type="upload_module" />
+
+					<module />
+
+				</wrapper>
+
+				<wrapper title="Login Background">
+
+					<module title="Background Image" desc="You can customize the background style by selecting from our predefined background images or uploading your own background image." id="admin_login_background_image" std="" type="custom_background_module" />
+
+					<module title="Image Position" desc="Choose the position you want your image to start with (i.e. if you choose left, your image will start from the very left edge)." id="admin_login_bg_position" std="left top" type="select_module" option="left top,left center,left bottom,right top,right center,right bottom,center top,center center,center bottom" />
+					
+					<module title="Image Repeat" desc="Choose how you want your image to be repeated if using a repeatable tile image. (i.e. if you choose repeat-x, this will repeat your image left to right)." id="admin_login_bg_repeat" std="repeat" type="select_module" option="no-repeat,repeat,repeat-x,repeat-y" />
+					
+					<module title="Background Attachment" desc="Select the effect you want your image to have whether it scrolls with the page or fixed in place" id="admin_login_bg_attachment" std="fixed" type="select_module" option="scroll,fixed" />
+					
+					<module title="Background Color" desc="Choose a background color for your site.  This color compliments the background design you chose if the design is semi-opaque, this background color setting will show through or if your background design does not fill the screen, this background color will fill the rest." id="admin_login_bg_color" std="" type="colorpicker_module" />
+
+					<module title="Link Text Color" desc="Pick a color for your link text.  This is usually used to provide contrast between the background and text." id="admin_login_link_text_color" std="" type="colorpicker_module" />
+
+					<module title="Link Text Color on Hover" desc="Pick a color for your link text on hover." id="admin_login_link_text_color_hover" std="" type="colorpicker_module" />
+				
+				</wrapper>
+
+			</panel>
+
+			<panel title="Visitor Login">
+
+				<wrapper title="Visitor Login">
+
+					<module title="Show Login Link" desc="Turn on to enable the display of the login link." id="show_login" std="on" type="radio_module" option="on,off" />
+
+					<module title="Login Page" desc="Select the page you want as your login page.  After you have selected the page, put the login shortcode on that page to display the login form." id="login_page" std="" type="list_page_module" />
+
+					<module title="Show Register/Signup Link" desc="Turn on to enable the display of the register/signup link.  Please note that show login needs to be on for this setting to show." id="show_register" std="on" type="radio_module" option="on,off" />
+
+					<module title="Register Page" desc="Select the page you want as your register page.  After you have selected the page, put the register shortcode on that page to display the register form." id="register_page" std="" type="list_page_module" />
+
+					<module title="Show Names" desc="Select the name type you would like the hello message to display once a user is logged in." id="show_login_name_type" std="user_login" type="select_module" option="user_login,user_nicename,display_name,first_name,last_name,nick_name,full_name,no_name" />
+
+				</wrapper>
+
+				<wrapper />
+
+			</panel>
+
+			<panel title="Google Analytics">
+
+				<wrapper title="Google Analytics">
+					
+					<module title="Paste Code" desc="Paste the Google Analytics code provided to you in your Google Analytics account. ( please do not include the opening and ending script tags as it has been added for you )" id="ga" std="" type="textarea_module" />
+					
+					<module />
+					
+				</wrapper>
+
+				<wrapper />
+
+			</panel>
+			
+			<panel title="SEO">
+
+				<wrapper title="General SEO">
+
+					<module title="Info" desc="This is the general SEO settings for your site and is used as a fallback when you don't have specific settings for a page.  To set SEO for a specific page, please refer to that page's settings." id="" std="" type="info_module" />
+
+					<module title="Enable SEO" desc="Turning this on will enable SEO for your site.  If you're using 3rd party SEO plugins, you can choose to turn this off." id="seo_enable" std="on" type="radio_module" option="on,off" />
+					
+					<module title="Meta Description" desc="(Maximum 160 Characters) Enter the description you want search engines to see for your site." id="seo_general_meta_description" std="" type="textarea_module" />
+
+					<module title="Meta Keywords" desc="(Comma separated list) Enter each keyword separated by a comma so the search engines will pick up." id="seo_general_meta_keywords" std="" type="textarea_module" />
+
+				</wrapper>
+
+				<wrapper />
+
+			</panel>
+
+			<panel title="Custom Scripts">
+
+				<wrapper title="Custom Scripts">
+				
+					<module title="Header Custom Script Code" desc="Enter your custom JS script here to be loaded in your head section. (Do not include the script tags as they are already added for you)" id="custom_head_scripts" std="" type="textarea_module" />
+					
+					<module title="Footer Custom Script Code" desc="Enter your custom JS script here to be loaded in your footer section. (Do not include the script tags as they are already added for you)" id="custom_footer_scripts" std="" type="textarea_module" />
+				
+				</wrapper>
+
+				<wrapper />
+			
+			</panel>
+
+			<panel title="Custom CSS Styles">
+
+				<wrapper title="Custom Styles">
+					
+					<module title="" desc="Add your own custom CSS styles here.  If you prefer to work in your own text editor, you can always modify the file user-styles.css in your theme folder.  If one does not exist, you can create it." id="" std="" type="info_module" />
+					
+					<module title="CSS Styles" desc="" id="custom_styles" std="" type="custom_styles_module" />
+				
+				</wrapper>
+
+				<wrapper />
+			
+			</panel>
+
+			<panel title="Maintenance Mode">
+
+				<wrapper title="Maintenance Mode Options">
+
+					<module title="Maintenance Page" desc="Click the button to create the page necessary to display  the maintenance page." id="maintenance_create_page" std="" type="create_page" msg="Maintenance Page does not exist." page_title="Maintenance" template="sp_maintenance.php" />
+					
+					<module title="Enable Maintenance Mode" desc="Check the box to enable maintenance mode." id="maintenance_enable" std="off" type="radio_module" option="on,off" />				
+				
+					<module title="Redirect to Page or URL" desc="Select if you want visitors to be redirected to the custom maintenance page on your site or to a specified external URL." id="maintenance_redirect_to" std="Maintenance Page" type="radio_module" option="Maintenance Page,URL"  />
+					
+					<module title="External URL" desc="Enter the external URL in which you want your visitors to be redirected to. (if URL is selected up above)" id="maintenance_url" std="" type="text_module" />
+					
+					<module title="Allowed IP Addresses" desc="Enter a list of IP addresses in which you want to allow access during the maintenance mode.  Enter one IP per line." id="maintenance_ips" std="" type="textarea_module" />
+					
+					<module title="Select Design" desc="You can choose to use the theme default design for the maintenance page or you can custom design your own maintenance page." id="maintenance_design" std="Theme Default" type="radio_module" option="Theme Default,Custom" />
+
+					<module title="Custom Page" desc="You can custom design your own maintenance page here." id="maintenance_page_link" std="" type="link_module" link="maintenance" context="slug" />
+
+					<module title="Show Logo" desc="Turn on to enable logo display." id="maintenance_logo" std="on" type="radio_module" option="on,off" />
+					
+					<module title="Title Text" desc="Enter the title text you want to display.  For example Maintenance In Progress." id="maintenance_title" std="Maintenance in Progress" type="text_module" />	
+					
+					<module title="Display Countdown" desc="Turn on to enable the countdown timer display." id="maintenance_countdown" std="on" type="radio_module" option="on,off" />
+					
+					<module title="UTC Timezone Offset" desc="Enter the UTC timezone offset you wish to use.  For example in Pacific Standard Time, it would be -7 with daylight savings time. (You can find out yours by going to http://www.timeanddate.com/worldclock/difference.html)" id="maintenance_timezone" std="-7" type="text_module" />
+					
+					<module title="Ending Maintenance Date Time" desc="Enter the date and time your maintenance will end." id="maintenance_datetime" std="" type="datepicker_module" />
+					
+					<module title="Enable Twitter Button" desc="Turn on to enable Twitter follow button." id="maintenance_twitter_enable" std="on" type="radio_module" option="on,off" />
+					
+					<module title="Twitter Account" desc="Enter your Twitter account URL (i.e. http://twitter.com/splashingpixels).." id="maintenance_twitter_account" std="" type="text_module" />
+
+					<module title="Email Notification" desc="Turning this on will display an email input field for visitors who wants to be kept up to date with the status of the site.  An email will be sent to the admin's email address." id="maintenance_email_notification" std="on" type="radio_module" option="on,off" />
+					
+				</wrapper>
+
+				<wrapper />
+			
+			</panel>
+			
+			<panel title="Import Export Settings">
+
+				<wrapper title="Configuration Settings">
+
+					<module title="" desc="You can save different configuration settings that you like and reapply them later.  This will let you easily test different settings without losing anything." id="" std="" type="info_module" />
+
+					<module title="Configuration" type="save_configuration_module" />
+
+				</wrapper>
+
+				<wrapper title="Import Export Theme Settings">
+
+					<module title="" desc="Alternatively to saving your configurations, you can export the entire theme settings to a file for safe keeping.  This can be used when you're switching host or wanting to start the database from scratch but want to retain your theme settings." id="" std="" type="info_module" />
+
+					<module title="Export Settings" desc="Copy and paste the code you see in the box into any plain text file and store it in a safe place.  You can use Notepad if you're on Windows or TextEdit if you're on Mac." id="export_theme_settings" std="" type="export_theme_settings_module" />
+					
+					<module title="Import Settings" desc="Paste the code you had previously saved into the box and click on import." id="import_theme_settings" std="" type="import_theme_settings_module" />
+
+				</wrapper>
+
+			</panel>
+			
+			<panel title="Reset Settings">
+
+				<wrapper title="Master Reset">
+					
+					<module title="Reset Customized Settings" desc="This will reset all customizations done via the theme customizer to their default values." id="theme_customizer_reset" std="" type="button_module" link="self" link_text="Reset Customized Settings" class="customizer-reset" />
+
+					<module title="Reset Config Settings Cache" desc="This will reset the config setting's cache and pull in new changes to the theme config file."  id="theme_config_rest" std="" type="button_module" link="self" link_text="Reset Theme Config Cache" class="theme-config-reset" />
+
+					<module title="Reset All Theme Settings" desc="This will reset all theme options to their default values." id="theme_reset" std="" type="button_module" link="self" link_text="Reset All" class="theme-reset" />
+										
+				</wrapper>
+				
+				<wrapper />
+
+			</panel>
+
+			<panel title="System Status">
+
+				<wrapper title="System Status">
+
+					<module title="System Status" desc="Here are a list of current status of your site." id="system_status" std="" type="system_module" />
+
+					<module />
+
+				</wrapper>
+
+				<wrapper />
+
+			</panel>
+
+		</general>
+		
+		<woo>
+
+			<panel title="General Options">
+
+				<wrapper title="Product Wishlist">
+
+					<module title="Product Wishlist Page" desc="Select the page you want as your wishlist page.  Please note that the page you select must use the page template of Product Wishlist for the display to work.  Simply go to your page and in the right hand sidebar, select the page template." id="wishlist_page" std="" type="list_page_module" />
+
+					<module title="Show Wishlist Icon" desc="Turning this on will show the product wishlist icon in the header area and will allow visitors to click on and be redirected to the wishlist page." id="show_wishlist_icon" std="on" type="radio_module" option="on,off" />
+
+				</wrapper>
+
+				<wrapper title="Product Compare">
+
+					<module title="Product Compare Page" desc="Select the page you want as your compare page.  Please note that the page you select must use the page template of Product Compare for the display to work.  Simply go to your page and in the right hand sidebar, select the page template." id="compare_page" std="" type="list_page_module" />
+
+					<module title="Show Compare Icon" desc="Turning this on will show the product compare icon in the header area and will allow visitors to click on and be redirected to the compare page." id="show_compare_icon" std="on" type="radio_module" option="on,off" />
+
+				</wrapper>
+
+				<wrapper title="Product Category">
+
+					<module title="Show Breadcrumbs" desc="Turn on to show breadcrumbs on product category pages." id="product_category_breadcrumbs" std="on" type="radio_module" option="on,off" />
+
+					<module title="Products Per Row" desc="Enter how many products you would like to display per row.  This is used on product category pages." id="products_per_row" std="3" type="select_module" option="1,2,3,4,5,6" />
+
+					<module title="Products Per Page" desc="Enter how many products per page to display.  This is used on product category pages." id="products_per_page" std="6" type="text_module" />
+
+					<module title="Show Product Ordering" desc="Turn on to show a dropdown for product ordering/sorting." id="show_product_ordering" std="on" type="radio_module" option="on,off" />
+
+				</wrapper>
+
+			</panel>
+
+			<panel title="Cart Options">
+
+				<wrapper title="Cart Options">
+
+					<module title="Show Mini Shopping Cart" desc="Turn on to enable the display of the mini cart in the header section." id="show_mini_cart" std="on" type="radio_module" option="on,off" />
+
+					<module title="Cart Type" desc="Select the mini cart type you would like displayed. Simple - shows only the number of items and the sub-total and whereas Full - shows the product details such as the name and image along with the sub-total and number of items."  id="mini_cart_type" std="full" type="select_module" option="full,simple" />
+
+				</wrapper>
+
+				<wrapper />
+
+			</panel>
+
+			<panel title="Product Options">
+
+				<wrapper title="Product View">
+					
+					<module title="Show Product Image Gallery" desc="Turn on to enable the display of multiple product gallery images under the main product image." id="show_product_gallery" std="on" type="radio_module" option="on,off" />
+					
+					<module title="Product Gallery Image Swap" desc="Turn on to enable product gallery image swap. When on, clicking on the product gallery thumbnail image will swap the main image with the one clicked.  When off, clicking on a gallery image will open a lightbox. (default is ON)" id="product_image_gallery_swap" std="on" type="radio_module" option="on,off" />	
+					
+					<module title="Product Image Gallery Slider" desc="Turn on to display your product gallery in a slider instead of a grid of images." id="product_image_gallery_slider" std="on" type="radio_module" option="on,off" />
+
+					<module title="Product Image Zoom" desc="Turn on to display an enlarged / zoomed in version of your product image when mouse is hovered over it." id="product_image_zoom" std="on" type="radio_module" option="on,off" />
+
+					<module title="Product Quickview" desc="Check box to enable SP Quickview System." id="quickview" std="on" type="radio_module" option="on,off" />	
+
+					<module title="Product Quickview Image Width" desc="Set the width you would like for your image inside the quickview box. This affects the size when image is in single column only.  We recommend not to exceed 400 pixels as it will have impact on performance on mobile devices." id="quickview_width" std="340" type="text_module" />
+
+					<module title="Product Quickview Image Height" desc="Set the height you would like for your image inside the quickview box. This affects the size when image is in single column only.  If your image is being cropped off too early, you can set unlimited height with 9999 pixels.  Or you can try turning OFF cropping on the setting below." id="quickview_height" std="340" type="text_module" />
+
+					<module title="Product Quickview Image Crop" desc="Set the image crop settings.  Turn on to perform a hard crop on the image where it will crop the image as close to your width and height settings above as possible.  Leave it off for a soft crop where it will crop it to the propotion of your image." id="quickview_image_crop" std="on" type="radio_module" option="on,off" />
+
+					<module title="Enable Product Grid/List View Buttons" desc="Turn on to enable the display of product views where users can click between grid or list view.  This is displayed on the product category pages." id="product_view_buttons" std="on" type="radio_module" option="on,off" />
+
+					<module title="Default Product View" desc="Set the default product view when a visitor first visits your site." id="product_view_default" std="grid" type="radio_module" option="grid-view,list-view" />
+
+					<module title="Enable Product Sale Badge" desc="Turn on to enable the display of sale badge for your products." id="show_product_sale_badge" std="on" type="radio_module" option="on,off" />
+
+					<module title="Enable Product New Badge" desc="Turn on to enable the display of new badge for your products." id="show_product_new_badge" std="on" type="radio_module" option="on,off" />
+
+					<module title="New Badge" desc="This sets how long to display the new badge.  For example if you enter 10, that means the new badge will show for 10 days after the date of when it was created." id="product_new_badge_duration" std="10" type="text_module" />
+
+					<module title="Show Social Share Icons" desc="Turning this on will show social share icons for your products.  This affects single product page only." id="show_product_social_share_icons" std="on" type="radio_module" option="on,off" />
+
+					<module title="Enable Add to Cart Button - Product List" desc="Turning this on will show add to cart button on product list." id="show_product_list_add_to_cart" std="on" type="radio_module" option="on,off" />
+
+				</wrapper>
+				
+				<wrapper title="Related, Up Sale and Cross Sale Products">
+
+					<module title="Show Related Products" desc="Turn on to show related products section." id="show_related_products" std="on" type="radio_module" option="on,off" />
+
+					<module title="Set Number of Related Products to Display" desc="Enter the number of related products you want to display on the single products page" id="related_product_count" std="15" type="text_module" />
+					
+					<module title="Related Product Heading Text" desc="Type the title you want to appear for your related product section" id="related_product_title" std="Related Products:" type="text_module" />
+					
+					<module title="Show Upsell Products" desc="Turn on to show upsell products section." id="show_upsell_products" std="on" type="radio_module" option="on,off" />
+
+					<module title="Set Number of Upsell Products to Display" desc="Enter the number of upsell products you want to display on the single products page" id="upsell_product_count" std="15" type="text_module" />
+					
+					<module title="Upsell Product Heading Text" desc="Type the title you want to appear for your upsell product section" id="upsell_product_title" std="You May Also Like:" type="text_module" />
+
+					<module title="Show Cross Sell Products" desc="Turn on to show cross sell products section in the cart." id="show_cross_sell_products" std="on" type="radio_module" option="on,off" />
+
+					<module title="Set Number of Cross Sell Products to Display" desc="Enter the number of cross sell products you want to display on the cart page" id="cross_sell_product_count" std="15" type="text_module" />
+					
+					<module title="Cross Sell Product Heading Text" desc="Type the title you want to appear for your cross sell product section" id="cross_sell_product_title" std="You may be interested in" type="text_module" />
+				</wrapper>	
+				
+				<wrapper title="Product Rating Stars">
+
+					<module title="Show Product Ratings" desc="Turn on to enable the display of product rating stars per product.  Note that this is not related to comment review form or function."  id="product_rating_stars"  std="on" type="radio_module" option="on,off" />
+				
+					<module />
+
+				</wrapper>	
+
+			</panel>
+
+			<panel title="Checkout">
+
+				<wrapper title="Login">
+
+					<module title="Enable Login on Checkout" desc="Turn on to enable sign up/login on checkout." id="checkout_login" std="on" type="radio_module" option="on,off" />
+					
+					<module />
+
+				</wrapper>
+				
+				<wrapper title="Checkout Flow">
+					
+					<module title="Enable 3 Step Checkout" desc="Turn on to enable 3 step checkout flow.  Note that some WooCommerce plugins are not compatible with this style of checkout.  If so, you may want to turn this off." id="checkout_3_step" std="on" type="radio_module" option="on,off" />
+
+					<module />
+
+				</wrapper>
+
+				<wrapper title="Additional Helpful Information">
+
+					<module title="Info" desc="This section allows you to add additional information on the checkout pages to help customers when in need.  For example you can add a contact phone number incase customers have questions on the checkout page or encounter an error.  Or you can add popup links like FAQs, Privacy Policy, contact email, shipping information, returns &amp; exchanges...etc." type="info_module" />
+
+					<module title="Show Additional Information" desc="Turn on to enable the display of additional information section on checkout pages.  If off, all items set below will not show." id="show_checkout_additional_info" std="on" type="radio_module" option="on,off" />
+					
+					<module title="Text Info" desc="Enter a line of text that will help customers if they need assistance in the checkout process.  For example, you can enter ( Need help? Contact us for further assistance. 888.888.8888 )." id="checkout_text_info" std="Need Help? Contact us for further assistance. 888.888.8888" type="textarea_module" rows="3" />
+
+					<module title="Add Popup Link" desc="You can add your popup links here." id="checkout_add_links" std="" type="add_links_module" />
+
+					<module title="Show Checkout Breadcrumbs" desc="Turning this on will show a breadcrumb indicating each step of the checkout process to the customers to better the usability." id="show_checkout_breadcrumbs" std="on" type="radio_module" option="on,off" />
+
+				</wrapper>
+
+				<wrapper title="SSL Seal">
+					
+					<module title="Info" desc="The following setting will place a SSL Seal in your checkout pages to further assure your customers that it is safe to shop in your store.  Please note that this is not to substitute a real SSL certificate." type="info_module" />
+
+					<module title="Upload SSL Image" desc="Upload the SSL image provided by your SSL provider.  Or you can paste the script below." id="checkout_secured_image" std="" type="upload_module" width="150" height="150" />
+					
+					<module title="SSL Code" desc="Paste the script code provided by your SSL provider to display the secured image/icon.  Take note that this will take precedence over the uploaded SSL image." id="checkout_secured_code" std="" type="textarea_module" />
+
+				</wrapper>
+
+			</panel>
+			
+		</woo>
+
+		<help>
+
+			<panel title="FAQ">
+
+				<wrapper title="FAQ">
+
+					<module title="Help! Every page is going to page not found!" answer="Go to WordPress settings->permalinks and click on save TWICE." type="faq_module" />
+					
+					<module title="How do I update the theme and framework?" answer="Go to your Splashing Pixels member dashboard by logging in.  Download the latest version of your theme.  Be sure to backup your existing site files and database prior to updating.  It is also best practice to update it on a test/staging server prior to your live site.  Unzip the newly downloaded zip file which now you should see your theme folder.  Within this folder consists of the framework as well.  Using a FTP program login to your site via FTP.  Put the contents of the theme folder to your current site's theme folder.  So the path should like similar to this /public_html/wp-content/themes/yourtheme/." type="faq_module" />
+					
+					<module title="How do I customize the CSS without it being overwritten on updates?" answer="There are two ways you can modify the CSS.  First way is to go to your theme settings->general settings tab->custom css styles.  The second way is to create a file called user-styles.css and place this file inside the theme folder root level.  The theme will know to look into this file for any styles you may wish to add or change." type="faq_module" />
+					
+					<module title="My theme settings does not seem to be saving!" answer="First check that when you click on the SAVE button, you see the spinning logo and a checkmark indicating your changes have been saved.  If you do see the spinning logo and checkmark but it still doesn't save, check if you have other conflicting plugins by deactivating one by one to see which one is the culprit.  If you do not see the checkmark but instead see the no can do sign, then try logging out and logging back in as this will flush your authentication." type="faq_module" />
+
+					<module title="Emails are not being received when using the built in contact form" answer="First check that WordPress itself is able to send emails by creating a temporary bogus account and checking the box that sends the password to the bogus account.  Make sure you put a valid email address.  If you do not receive anything from WordPress, it could mean your server is not allowing you to use mail() function.  In those cases you would need a third party plugin so that you can use SMTP mail protocol instead.  Here is a community recommended plugin you can try http://wordpress.org/extend/plugins/wp-mail-smtp/." type="faq_module" />
+
+					<module title="Theme customizer preview window is acting up!" answer="If you have tabs displayed in the preview, this can happen and it is a bug in WordPress.  This bug has already been reported and you can track the ticket here -> http://core.trac.wordpress.org/ticket/24032.  Meanwhile to overcome this issue, simply disable any tabs on that page temoprarily while you're using the customizer." type="faq_module" />
+
+					<module title="Help! I am getting Fatal error: Maximum execution time of 30 seconds exceeded in /MY_SITE_PATH/wp-includes/class-wp-image-editor-imagick.php" answer="This error is usually due to the image sizes being too large.  To remedy this issue, please try to keep each image you upload no more than 300k.  You can do this by optimizing your images for the WEB.  Most graphic programs have this function such as Photoshop." type="faq_module" />
+
+					<module title="None of my footer widgets are showing!" answer="Make sure you have enable sitewide sidebars in your theme settings->sidebar layouts." type="faq_module" />
+
+					<module title="Tagline is not updating or turning on in live preview in customizer" answer="After you have clicked to turn on, save the settings first and on the next page refresh it will show up and you can then start to customize it." type="faq_module" />
+
+					<module title="Quickview popup box keeps closing when I am trying to customize it in the theme customizer." answer="Unfortunately there is no work around for this as the quickview popup was designed to go away when mouse clicks outside of the popup box.  However any changes you make in the customizer will still take affect." type="faq_module" />
+
+				</wrapper>
+
+				<wrapper />
+
+			</panel>
+
+			<panel />
+
+		</help>
+
+	</tab>
+	
+	<init>
+		<!--post image sizes-->
+		<set_post_thumbnail_size width="850" height="300" crop="1" />
+		<post_related_image_size width="150" height="150" crop="1" />	
+
+		<!--WOO product gallery thumbnails-->
+		<woo_product_thumbnails_size width="60" height="60" crop="1" />
+
+		<!--WOO mini cart image-->
+		<woo_mini_cart_image_size width="60" height="60" crop="1" />
+
+		<!--WOO product detail main image-->
+		<woo_product_single_image_size width="450" height="450" crop="1" />
+
+		<!--WOO product listing grid image-->
+		<woo_product_catalog_image_size width="250" height="250" crop="1" />
+		
+		<!--WOO related product image size-->
+		<woo_related_product_image_size width="130" height="130" crop="1" />
+
+		<!--WOO upsell product image size-->
+		<woo_upsell_product_image_size width="130" height="130" crop="1" />
+
+		<!--WOO cross sell product image size-->
+		<woo_cross_sell_product_image_size width="130" height="130" crop="1" />
+
+		<!--portfolio image sizes-->
+		<portfolio_list_size width="250" height="150" crop="1" />
+		<portfolio_single_size width="1170" height="360" crop="1" />
+
+		<!--carousel slider image sizes-->
+		<carousel_slider_size width="145" height="145" />
+		
+		<!--carousel slider backend settings-->
+		<slider_type std="single" />
+		<slider_mode std="horizontal" />
+		<slider_carousel_item_width std="145" />
+		<slider_carousel_item_height std="145" />
+		<slider_show_title std="off" />
+		<slider_title_text std="" />
+		<slider_title_font std="" />
+		<slider_title_font_variant std="" />
+		<slider_title_font_subset std="" />
+		<slider_title_color std="" />
+		<slider_title_size std="16px" />
+		<slider_bg_color std="" />
+		<slider_show_border std="off" />
+		<slider_show_shadow std="on" />
+		<slider_show_text_overlay std="off" />
+		<slider_overlay_position std="bottom" />
+		<slider_overlay_color std="" />
+		<slider_overlay_opacity std="" />
+		<slider_easing std="" />
+		<slider_randomize std="off" />
+		<slider_autoscroll std="off" />
+		<slider_interval std="6" />
+		<slider_circular std="on" />
+		<slider_nav std="on" />
+		<slider_dot_nav std="off" />
+		<slider_pause_on_hover std="on" />
+		<slider_items_per_click std="1" />
+		<slider_transition_speed std="500" />
+		<slider_reverse_direction std="off" />
+		<slider_touch_swipe std="off" />
+		<slider_items_to_show std="4" />
+		<slide_slogan_title std="" />
+		<slide_slogan_title_color std="" />
+		<slide_slogan_title_font std="" />
+		<slide_slogan_title_font_variant std="" />
+		<slide_slogan_title_font_subset std="" />
+		<slide_slogan_title_size std="16px" />
+		<slide_content std="" />
+		<slide_content_color std="" />
+		<slide_content_font_size std="14px" />
+		<slide_link_out std="off" />
+		<slide_link std="" />
+		<slide_link_title std="" />
+		<slide_link_title_color std="" />
+		<slide_link_title_font std="" />
+		<slide_link_title_font_variant std="" />
+		<slide_link_title_font_subset std="" />
+		<slide_link_title_size std="16px" />
+		<slide_title std="" />
+		<slide_title_color std="" />
+		<slide_title_font std="" />
+		<slide_title_font_variant std="" />
+		<slide_title_font_subset std="" />
+		<slide_title_size std="16px" />
+		<slide_link_lightbox std="on" />
+
+		<!--nav menu settings-->
+		<nav_menu title="Top Bar Menu" name="top-bar-menu" />
+		<nav_menu title="Primary Menu" name="primary-menu" />
+		<nav_menu title="Footer Bar Menu" name="footer-bar-menu" />
+		<nav_menu title="Mobile Menu" name="mobile-menu" />
+
+		<!--add pages-->
+		<add_page name="Maintenance" file="maintenance-page.php" content='' />
+		
+		<!--theme default fonts-->
+		<fonts name="Source Sans Pro:regular,300,400:latin" />
+
+		<!--customizer default settings-->
+		
+		<customizer_sections section="Logo" context="" />
+		<customizer_sections section="Tagline" context="" />
+		<customizer_sections section="Favicon" context="" />
+		<customizer_sections section="Body Text Color" context="" />
+		<customizer_sections section="Site Background" context="" />
+		<customizer_sections section="Topbar Background" context="" />
+		<customizer_sections section="Header Background" context="" />
+		<customizer_sections section="Nav Background" context="" />
+		<customizer_sections section="Page Header Background" context="" />
+		<customizer_sections section="Main Content Background" context="" />
+		<customizer_sections section="Footer Content Background" context="" />
+		<customizer_sections section="Footer Bar Background" context="" />
+		<customizer_sections section="Quickview Background" context="woo" />
+		<customizer_sections section="Navigation" context="" />
+		<customizer_sections section="Copyright" context="" />
+		<customizer_sections section="Headings" context="" />
+		<customizer_sections section="Blog" context="" />
+		<customizer_sections section="Page" context="" />
+		<customizer_sections section="Products" context="woo" />
+		<customizer_sections section="Widgets" context="" />
+
+		<!--LOGO-->
+		<customizer section="logo" control="reset_default" std="" id="logo_reset_default" selector="none" label="Reset Default" priority="0" property="none" prefix="" suffix="" />
+		<customizer section="logo" control="radio" std="on" id="logo_show" selector="#logo" label="Show Logo" priority="1" property="none" prefix="" suffix="" choices="on,off" />
+		<customizer section="logo" control="radio" std="image" id="logo_image_text" selector="none" label="Logo Type" priority="2" property="none" prefix="" suffix="" choices="image,text" />
+		<customizer section="logo" control="upload" std="" id="logo_upload" selector="none" label="Logo Image" priority="3" property="none" prefix="" suffix="" />		
+		<customizer section="logo" control="text" std="" id="logo_title_text" selector="none" label="Logo Title" priority="4" property="none" prefix="" suffix="" />
+		<customizer section="logo" control="font" std="Source Sans Pro" id="logo_font" selector="#logo" label="Logo Font" priority="5" property="font-family" prefix="" suffix="" />
+		<customizer section="logo" control="font_variant" std="" id="logo_font_variant" selector="#logo" label="Logo Font Variant" priority="6" property="font-weight" prefix="" suffix="" />
+		<customizer section="logo" control="font_subset" std="" id="logo_font_subset" selector="none" label="Logo Font Subset" priority="7" property="none" prefix="" suffix="" />
+		<customizer section="logo" control="colorpicker" std="#ccc" id="logo_title_color" selector="#logo" label="Logo Font Color" priority="8" property="color" prefix="#" suffix="" />
+		<customizer section="logo" control="colorpicker" std="" id="logo_title_color_hover" selector="#logo:hover" label="Logo Font Color on Hover" priority="9" property="color" prefix="#" suffix="" />		
+		<customizer section="logo" control="text_size" std="16px" id="logo_title_size" selector="#logo" label="Logo Font Size" priority="10" property="font-size" prefix="" suffix="px" />
+		<customizer section="logo" control="select" std="normal" id="logo_font_style" selector="#logo" label="Logo Font Style" priority="11" property="font-style" prefix="" suffix="" choices="normal,italic,oblique" />
+		<customizer section="logo" control="select" std="normal" id="logo_font_weight" selector="#logo" label="Logo Font Weight" priority="12" property="font-weight" prefix="" suffix="" choices="normal,bold" />
+		<customizer section="logo" control="select" std="none" id="logo_text_decoration" selector="#logo" label="Logo Text Decoration" priority="13" property="text-decoration" prefix="" suffix="" choices="underline,overline,line-through,blink" />
+		<customizer section="logo" control="select" std="none" id="logo_text_decoration_hover" selector="#logo:hover" label="Logo Text Decoration on Hover" priority="14" property="text-decoration" prefix="" suffix="" choices="underline,overline,line-through,blink" />
+
+		<!--TAGLINE-->
+		<customizer section="tagline" control="reset_default" std="" id="tagline_reset_default" selector="none" label="Reset Default" priority="0" property="none" prefix="" suffix="" />
+		<customizer section="tagline" control="radio" std="off" id="tagline_show" selector="#main-header #brand-container #tagline" label="Show Tagline" priority="1" property="none" prefix="" suffix="" choices="on,off" />
+		<customizer section="tagline" control="text" std="" id="tagline_title_text" selector="#main-header #brand-container #tagline" label="Tagline Title" priority="2" property="none" prefix="" suffix="" />
+		<customizer section="tagline" control="font" std="Source Sans Pro" id="tagline_font" selector="#main-header #brand-container #tagline" label="Tagline Font" priority="3" property="font-family" prefix="" suffix="" />
+		<customizer section="tagline" control="font_variant" std="" id="tagline_font_variant" selector="#main-header #brand-container #tagline" label="Tagline Font Variant" priority="4" property="font-weight" prefix="" suffix="" />
+		<customizer section="tagline" control="font_subset" std="" id="tagline_font_subset" selector="#main-header #brand-container #tagline" label="Tagline Font Subset" priority="5" property="none" prefix="" suffix="" />
+		<customizer section="tagline" control="colorpicker" std="" id="tagline_title_color" selector="#main-header #brand-container #tagline" label="Tagline Font Color" priority="6" property="color" prefix="#" suffix="" />		
+		<customizer section="tagline" control="text_size" std="12px" id="tagline_title_size" selector="#main-header #brand-container #tagline" label="Tagline Font Size" priority="7" property="font-size" prefix="" suffix="px" />
+		<customizer section="tagline" control="select" std="italic" id="tagline_font_style" selector="#main-header #brand-container #tagline" label="Tagline Font Style" priority="8" property="font-style" prefix="" suffix="" choices="normal,italic,oblique" />
+		<customizer section="tagline" control="select" std="normal" id="tagline_font_weight" selector="#main-header #brand-container #tagline" label="Tagline Font Weight" priority="9" property="font-weight" prefix="" suffix="" choices="normal,bold" />	
+
+		<!--FAVICON-->
+		<customizer section="favicon" control="reset_default" std="" id="favicon_reset_default" selector="none" label="Reset Default" priority="0" property="none" prefix="" suffix="" />
+		<customizer section="favicon" control="upload" std="" id="favicon_upload" selector="#favicon" label="Favicon Image" priority="1" property="href" prefix="" suffix="" />
+		
+		<!--BODY TEXT COLOR-->
+		<customizer section="body_text_color" control="reset_default" std="" id="body_text_color_reset_default" selector="none" label="Reset Default" priority="0" property="none" prefix="" suffix="" />
+		<customizer section="body_text_color" control="colorpicker" std="333333" id="body_text_color" selector="body" label="Body Text Color" priority="1" property="color" prefix="#" suffix="" />
+
+		<!--SITE BACKGROUND-->
+		<customizer section="site_background" control="reset_default" std="" id="site_background_reset_default" selector="none" label="Reset Default" priority="0" property="none" prefix="" suffix="" />
+		<customizer section="site_background" control="predefined_bg" std="site-bg.png" id="background_site_predefined" selector="body" label="Backgrounds" priority="1" property="background-image" prefix="url(" suffix=")" />		
+		<customizer section="site_background" control="upload" std="" id="background_site_upload" selector="body" label="Upload Image" priority="2" property="background-image" prefix="url(" suffix=")" />
+		<customizer section="site_background" control="select" std="none" id="background_site_bg_position" selector="body" label="Background Position" priority="3" property="background-position" prefix="" suffix="" choices="left top,left center,left bottom,center top,center center,center bottom,right top, right center, right bottom" />		
+		<customizer section="site_background" control="select" std="repeat" id="background_site_bg_repeat" selector="body" label="Background Repeat" priority="4" property="background-repeat" prefix="" suffix="" choices="repeat,repeat-x,repeat-y,no-repeat" />
+		<customizer section="site_background" control="select" std="site-bg.png" id="background_site_bg_attachment" selector="body" label="Background Attachment" priority="5" property="background-attachment" prefix="" suffix="" choices="fixed,scroll" />
+		<customizer section="site_background" control="colorpicker" std="" id="background_site_bg_color" selector="body" label="Background Color" priority="6" property="background-color" prefix="#" suffix="" />	
+
+		<!--TOPBAR BACKGROUND-->
+		<customizer section="topbar_background" control="reset_default" std="" id="topbar_background_reset_default" selector="none" label="Reset Default" priority="0" property="none" prefix="" suffix="" />
+		<customizer section="topbar_background" control="predefined_bg" std="top-strip-bg.png" id="background_topbar_predefined" selector="#top-bar" label="Backgrounds" priority="1" property="background-image" prefix="url(" suffix=")" />		
+		<customizer section="topbar_background" control="upload" std="" id="background_topbar_upload" selector="#top-bar" label="Upload Image" priority="2" property="background-image" prefix="url(" suffix=")" />
+		<customizer section="topbar_background" control="select" std="none" id="background_topbar_bg_position" selector="#top-bar" label="Background Position" priority="3" property="background-position" prefix="" suffix="" choices="left top,left center,left bottom,center top,center center,center bottom,right top, right center, right bottom" />		
+		<customizer section="topbar_background" control="select" std="none" id="background_topbar_bg_repeat" selector="#top-bar" label="Background Repeat" priority="4" property="background-repeat" prefix="" suffix="" choices="repeat,repeat-x,repeat-y,no-repeat" />
+		<customizer section="topbar_background" control="colorpicker" std="" id="background_topbar_bg_color" selector="#top-bar" label="Background Color" priority="5" property="background-color" prefix="#" suffix="" />	
+
+		<!--HEADER BACKGROUND-->
+		<customizer section="header_background" control="reset_default" std="" id="header_background_reset_default" selector="none" label="Reset Default" priority="0" property="none" prefix="" suffix="" />
+		<customizer section="header_background" control="predefined_bg" std="" id="background_header_predefined" selector="#main-header" label="Backgrounds" priority="1" property="background-image" prefix="url(" suffix=")" />		
+		<customizer section="header_background" control="upload" std="" id="background_header_upload" selector="#main-header" label="Upload Image" priority="2" property="background-image" prefix="url(" suffix=")" />
+		<customizer section="header_background" control="select" std="center bottom" id="background_header_bg_position" selector="#main-header" label="Background Position" priority="3" property="background-position" prefix="" suffix="" choices="left top,left center,left bottom,center top,center center,center bottom,right top, right center, right bottom" />		
+		<customizer section="header_background" control="select" std="repeat-x" id="background_header_bg_repeat" selector="#main-header" label="Background Repeat" priority="4" property="background-repeat" prefix="" suffix="" choices="repeat,repeat-x,repeat-y,no-repeat" />
+		<customizer section="header_background" control="colorpicker" std="" id="background_header_bg_color" selector="#main-header" label="Background Color" priority="5" property="background-color" prefix="#" suffix="" />	
+
+		<!--NAV BACKGROUND-->
+		<customizer section="nav_background" control="reset_default" std="" id="nav_background_reset_default" selector="none" label="Reset Default" priority="0" property="none" prefix="" suffix="" />
+		<customizer section="nav_background" control="predefined_bg" std="" id="background_nav_predefined" selector=".nav-wrap" label="Backgrounds" priority="1" property="background-image" prefix="url(" suffix=")" />		
+		<customizer section="nav_background" control="upload" std="" id="background_nav_upload" selector=".nav-wrap" label="Upload Image" priority="2" property="background-image" prefix="url(" suffix=")" />
+		<customizer section="nav_background" control="select" std="none" id="background_nav_bg_position" selector=".nav-wrap" label="Background Position" priority="3" property="background-position" prefix="" suffix="" choices="left top,left center,left bottom,center top,center center,center bottom,right top, right center, right bottom" />		
+		<customizer section="nav_background" control="select" std="none" id="background_nav_bg_repeat" selector=".nav-wrap" label="Background Repeat" priority="4" property="background-repeat" prefix="" suffix="" choices="repeat,repeat-x,repeat-y,no-repeat" />
+		<customizer section="nav_background" control="colorpicker" std="" id="background_nav_bg_color" selector=".nav-wrap" label="Background Color" priority="5" property="background-color" prefix="#" suffix="" />
+
+		<!--PAGE HEADER BACKGROUND-->
+		<customizer section="page_header_background" control="reset_default" std="" id="page_header_background_reset_default" selector="none" label="Reset Default" priority="0" property="none" prefix="" suffix="" />
+		<customizer section="page_header_background" control="predefined_bg" std="" id="background_page_header_predefined" selector="header.page-header" label="Backgrounds" priority="1" property="background-image" prefix="url(" suffix=")" />		
+		<customizer section="page_header_background" control="upload" std="" id="background_page_header_upload" selector="header.page-header" label="Upload Image" priority="2" property="background-image" prefix="url(" suffix=")" />
+		<customizer section="page_header_background" control="select" std="none" id="background_page_header_bg_position" selector="header.page-header" label="Background Position" priority="3" property="background-position" prefix="" suffix="" choices="left top,left center,left bottom,center top,center center,center bottom,right top, right center, right bottom" />		
+		<customizer section="page_header_background" control="select" std="none" id="background_page_header_bg_repeat" selector="header.page-header" label="Background Repeat" priority="4" property="background-repeat" prefix="" suffix="" choices="repeat,repeat-x,repeat-y,no-repeat" />
+		<customizer section="page_header_background" control="colorpicker" std="" id="background_page_header_bg_color" selector="header.page-header" label="Background Color" priority="5" property="background-color" prefix="#" suffix="" />
+
+		<!--CONTENT BACKGROUND-->
+		<customizer section="main_content_background" control="reset_default" std="" id="main_content_background_reset_default" selector="none" label="Reset Default" priority="0" property="none" prefix="" suffix="" />
+		<customizer section="main_content_background" control="predefined_bg" std="#ffffff" id="background_main_content_predefined" selector=".main-container" label="Backgrounds" priority="1" property="background-image" prefix="url(" suffix=")" />		
+		<customizer section="main_content_background" control="upload" std="" id="background_main_content_upload" selector=".main-container" label="Upload Image" priority="2" property="background-image" prefix="url(" suffix=")" />
+		<customizer section="main_content_background" control="select" std="none" id="background_main_content_bg_position" selector=".main-container" label="Background Position" priority="3" property="background-position" prefix="" suffix="" choices="left top,left center,left bottom,center top,center center,center bottom,right top, right center, right bottom" />		
+		<customizer section="main_content_background" control="select" std="none" id="background_main_content_bg_repeat" selector=".main-container" label="Background Repeat" priority="4" property="background-repeat" prefix="" suffix="" choices="repeat,repeat-x,repeat-y,no-repeat" />
+		<customizer section="main_content_background" control="colorpicker" std="#ffffff" id="background_main_content_bg_color" selector=".main-container" label="Background Color" priority="5" property="background-color" prefix="#" suffix="" />			
+
+		<!--FOOTER CONTENT BACKGROUND-->
+		<customizer section="footer_content_background" control="reset_default" std="" id="footer_content_background_reset_default" selector="none" label="Reset Default" priority="0" property="none" prefix="" suffix="" />
+		<customizer section="footer_content_background" control="predefined_bg" std="top-strip-bg.png" id="background_footer_content_predefined" selector="#footer-wrap" label="Backgrounds" priority="1" property="background-image" prefix="url(" suffix=")" />		
+		<customizer section="footer_content_background" control="upload" std="" id="background_footer_content_upload" selector="#footer-wrap" label="Upload Image" priority="2" property="background-image" prefix="url(" suffix=")" />
+		<customizer section="footer_content_background" control="select" std="none" id="background_footer_content_bg_position" selector="#footer-wrap" label="Background Position" priority="3" property="background-position" prefix="" suffix="" choices="left top,left center,left bottom,center top,center center,center bottom,right top, right center, right bottom" />		
+		<customizer section="footer_content_background" control="select" std="repeat-x" id="background_footer_content_bg_repeat" selector="#footer-wrap" label="Background Repeat" priority="4" property="background-repeat" prefix="" suffix="" choices="repeat,repeat-x,repeat-y,no-repeat" />
+		<customizer section="footer_content_background" control="colorpicker" std="" id="background_footer_content_bg_color" selector="#footer-wrap" label="Background Color" priority="5" property="background-color" prefix="#" suffix="" />	
+
+		<!--FOOTER BAR BACKGROUND-->
+		<customizer section="footer_bar_background" control="reset_default" std="" id="footer_bar_background_reset_default" selector="none" label="Reset Default" priority="0" property="none" prefix="" suffix="" />
+		<customizer section="footer_bar_background" control="predefined_bg" std="#232323" id="background_footer_bar_predefined" selector="#footer-wrap .footer-bar" label="Backgrounds" priority="1" property="background-image" prefix="url(" suffix=")" />		
+		<customizer section="footer_bar_background" control="upload" std="" id="background_footer_bar_upload" selector="#footer-wrap .footer-bar" label="Upload Image" priority="2" property="background-image" prefix="url(" suffix=")" />
+		<customizer section="footer_bar_background" control="select" std="none" id="background_footer_bar_bg_position" selector="#footer-wrap .footer-bar" label="Background Position" priority="3" property="background-position" prefix="" suffix="" choices="left top,left center,left bottom,center top,center center,center bottom,right top, right center, right bottom" />		
+		<customizer section="footer_bar_background" control="select" std="none" id="background_footer_bar_bg_repeat" selector="#footer-wrap .footer-bar" label="Background Repeat" priority="4" property="background-repeat" prefix="" suffix="" choices="repeat,repeat-x,repeat-y,no-repeat" />
+		<customizer section="footer_bar_background" control="colorpicker" std="#232323" id="background_footer_bar_bg_color" selector="#footer-wrap .footer-bar" label="Background Color" priority="5" property="background-color" prefix="#" suffix="" />	
+
+		<!--QUICKVIEW BACKGROUND-->
+		<customizer section="quickview_background" control="reset_default" std="" id="quickview_background_reset_default" selector="none" label="Reset Default" priority="0" property="none" prefix="" suffix="" />
+		<customizer section="quickview_background" control="predefined_bg" std="#ffffff" id="background_quickview_predefined" selector=".sp-quickview" label="Backgrounds" priority="1" property="background-image" prefix="url(" suffix=")" />		
+		<customizer section="quickview_background" control="upload" std="" id="background_quickview_upload" selector=".sp-quickview" label="Upload Image" priority="2" property="background-image" prefix="url(" suffix=")" />
+		<customizer section="quickview_background" control="select" std="none" id="background_quickview_bg_position" selector=".sp-quickview" label="Background Position" priority="3" property="background-position" prefix="" suffix="" choices="left top,left center,left bottom,center top,center center,center bottom,right top, right center, right bottom" />		
+		<customizer section="quickview_background" control="select" std="none" id="background_quickview_bg_repeat" selector=".sp-quickview" label="Background Repeat" priority="4" property="background-repeat" prefix="" suffix="" choices="repeat,repeat-x,repeat-y,no-repeat" />
+		<customizer section="quickview_background" control="colorpicker" std="#ffffff" id="background_quickview_bg_color" selector=".sp-quickview" label="Background Color" priority="5" property="background-color" prefix="#" suffix="" />
+
+		<!--NAVIGATION-->
+		<!--primary nav-->
+		<customizer section="navigation" control="reset_default" std="" id="navigation_reset_default" selector="none" label="Reset Default" priority="0" property="none" prefix="" suffix="" />
+		<customizer section="navigation" control="font" std="Source Sans Pro" id="primary_navigation_font" selector="#primary-nav > ul > li > a, .nav-wrap .menu  > ul > li > a" label="Primary Nav Text Font" priority="40" property="font-family" prefix="" suffix="" />
+		<customizer section="navigation" control="font_variant" std="" id="primary_navigation_font_variant" selector="#primary-nav > ul > li > a, .nav-wrap .menu > ul > li > a" label="Primary Nav Text Font Variant" priority="41" property="font-weight" prefix="" suffix="" />
+		<customizer section="navigation" control="font_subset" std="" id="primary_navigation_font_subset" selector="none" label="Primary Nav Text Font Susbset" priority="42" property="none" prefix="" suffix="" />
+		<customizer section="navigation" control="colorpicker" std="333333" id="primary_navigation_text_color" selector="#primary-nav > ul > li > a, .nav-wrap .menu > ul > li > a" label="Primary Nav Text Color" priority="43" property="color" prefix="#" suffix="" />	
+		<customizer section="navigation" control="colorpicker" std="de4127" id="primary_navigation_text_color_hover" selector="#primary-nav > ul > li > a:hover, .nav-wrap .menu > ul > li > a:hover" label="Primary Nav Text Color on Hover" priority="44" property="color" prefix="#" suffix="" />			
+		<customizer section="navigation" control="text_size" std="16px" id="primary_navigation_text_size" selector="#primary-nav > ul > li > a, .nav-wrap .menu > ul > li > a" label="Primary Nav Font Size" priority="45" property="font-size" prefix="" suffix="px" />
+		<customizer section="navigation" control="select" std="normal" id="primary_navigation_font_style" selector="#primary-nav > ul > li > a, .nav-wrap .menu > ul > li > a" label="Primary Nav Font Style" priority="46" property="font-style" prefix="" suffix="" choices="normal,italic,oblique" />
+		<customizer section="navigation" control="select" std="normal" id="primary_navigation_font_weight" selector="#primary-nav > ul > li > a, .nav-wrap .menu > ul > li > a" label="Primary Nav Font Weight" priority="47" property="font-weight" prefix="" suffix="" choices="normal,bold" />
+
+		<!--divider-->
+		<customizer section="navigation" control="divider" std="" id="topbar_navigation_divider" selector="none" label="" priority="48" property="none" prefix="" suffix="" />
+		
+		<!--top bar nav-->
+		<customizer section="navigation" control="font" std="Source Sans Pro" id="topbar_navigation_font" selector="#top-bar nav.top-bar-nav" label="Top Bar Nav Text Font" priority="49" property="font-family" prefix="" suffix="" />
+		<customizer section="navigation" control="font_variant" std="" id="topbar_navigation_font_variant" selector="#top-bar nav.top-bar-nav > ul > li > a" label="Top Bar Nav Text Font Variant" priority="50" property="font-weight" prefix="" suffix="" />
+		<customizer section="navigation" control="font_subset" std="" id="topbar_navigation_font_subset" selector="none" label="Top Bar Nav Text Font Susbset" priority="51" property="none" prefix="" suffix="" />
+		<customizer section="navigation" control="colorpicker" std="" id="topbar_navigation_text_color" selector="#top-bar nav.top-bar-nav > ul > li > a" label="Top Bar Nav Text Color" priority="52" property="color" prefix="#" suffix="" />	
+		<customizer section="navigation" control="colorpicker" std="" id="topbar_navigation_text_color_hover" selector="#top-bar nav.top-bar-nav > ul > li > a:hover" label="Top Bar Nav Text Color on Hover" priority="53" property="color" prefix="#" suffix="" />			
+		<customizer section="navigation" control="text_size" std="12px" id="topbar_navigation_text_size" selector="#top-bar nav.top-bar-nav > ul > li > a" label="Top Bar Nav Font Size" priority="54" property="font-size" prefix="" suffix="px" />
+		<customizer section="navigation" control="select" std="normal" id="topbar_navigation_font_style" selector="#top-bar nav.top-bar-nav > ul > li > a" label="Top Bar Nav Font Style" priority="55" property="font-style" prefix="" suffix="" choices="normal,italic,oblique" />
+		<customizer section="navigation" control="select" std="normal" id="topbar_navigation_font_weight" selector="#top-bar nav.top-bar-nav > ul > li > a" label="Top Bar Nav Font Weight" priority="56" property="font-weight" prefix="" suffix="" choices="normal,bold" />
+
+		<!--divider-->
+		<customizer section="navigation" control="divider" std="" id="footer_navigation_divider" selector="none" label="" priority="57" property="none" prefix="" suffix="" />
+
+		<!--footer nav-->
+		<customizer section="navigation" control="font" std="Source Sans Pro" id="footer_navigation_font" selector="#footer-wrap .footer-bar .footer-bar-nav, #footer-wrap .footer-bar .footer-bar-nav > ul > li > a" label="Footer Nav Text Font" priority="58" property="font-family" prefix="" suffix="" />
+		<customizer section="navigation" control="font_variant" std="" id="footer_navigation_font_variant" selector="#footer-wrap .footer-bar .footer-bar-nav, #footer-wrap .footer-bar .footer-bar-nav > ul > li > a" label="Footer Nav Text Font Variant" priority="59" property="font-weight" prefix="" suffix="" />
+		<customizer section="navigation" control="font_subset" std="" id="footer_navigation_font_subset" selector="none" label="Footer Nav Text Font Susbset" priority="60" property="none" prefix="" suffix="" />
+		<customizer section="navigation" control="colorpicker" std="" id="footer_navigation_text_color" selector="#footer-wrap .footer-bar .footer-bar-nav, #footer-wrap .footer-bar .footer-bar-nav > ul > li > a" label="Footer Nav Text Color" priority="61" property="color" prefix="#" suffix="" />	
+		<customizer section="navigation" control="colorpicker" std="" id="footer_navigation_text_color_hover" selector="#footer-wrap .footer-bar .footer-bar-nav > ul > li > a:hover" label="Footer Nav Text Color on Hover" priority="62" property="color" prefix="#" suffix="" />			
+		<customizer section="navigation" control="text_size" std="12px" id="footer_navigation_text_size" selector="#footer-wrap .footer-bar .footer-bar-nav, #footer-wrap .footer-bar .footer-bar-nav > ul > li > a" label="Footer Nav Font Size" priority="63" property="font-size" prefix="" suffix="px" />
+		<customizer section="navigation" control="select" std="normal" id="footer_navigation_font_style" selector="#footer-wrap .footer-bar .footer-bar-nav, #footer-wrap .footer-bar .footer-bar-nav > ul > li > a" label="Footer Nav Font Style" priority="64" property="font-style" prefix="" suffix="" choices="normal,italic,oblique" />
+		<customizer section="navigation" control="select" std="normal" id="footer_navigation_font_weight" selector="#footer-wrap .footer-bar .footer-bar-nav, #footer-wrap .footer-bar .footer-bar-nav > ul > li > a" label="Footer Nav Font Weight" priority="65" property="font-weight" prefix="" suffix="" choices="normal,bold" />
+
+		<!--COPYRIGHT-->
+		<customizer section="copyright" control="reset_default" std="" id="copyright_reset_default" selector="none" label="Reset Default" priority="0" property="none" prefix="" suffix="" />
+		<customizer section="copyright" control="radio" std="on" id="copyright_show" selector="#copyright" label="Show Copyright" priority="1" property="none" prefix="" suffix="" choices="on,off" />
+		<customizer section="copyright" control="text" std="Splashing Pixels &amp;copy; %%YEAR%%, All Rights Reserved." id="copyright_title_text" selector="#copyright" label="Copyright Text" priority="2" property="none" prefix="" suffix="" />		
+		<customizer section="copyright" control="font" std="Source Sans Pro" id="copyright_font" selector="#copyright" label="Copyright Text Font" priority="3" property="font-family" prefix="" suffix="" />
+		<customizer section="copyright" control="font_variant" std="" id="copyright_font_variant" selector="#copyright" label="Copyright Text Font Variant" priority="4" property="font-weight" prefix="" suffix="" />
+		<customizer section="copyright" control="font_subset" std="" id="copyright_font_susbset" selector="#copyright" label="Copyright Text Font Subset" priority="5" property="none" prefix="" suffix="" />
+		<customizer section="copyright" control="colorpicker" std="" id="copyright_text_color" selector="#copyright" label="Copyright Font Color" priority="6" property="color" prefix="#" suffix="" />		
+		<customizer section="copyright" control="text_size" std="12px" id="copyright_text_size" selector="#copyright" label="Copyright Font Size" priority="7" property="font-size" prefix="" suffix="px" />
+		<customizer section="copyright" control="select" std="italic" id="copyright_font_style" selector="#copyright" label="Copyright Font Style" priority="8" property="font-style" prefix="" suffix="" choices="normal,italic,oblique" />
+		<customizer section="copyright" control="select" std="normal" id="copyright_font_weight" selector="#copyright" label="Copyright Font Weight" priority="9" property="font-weight" prefix="" suffix="" choices="normal,bold" />
+		<customizer section="copyright" control="colorpicker" std="" id="copyright_link_color" selector="#copyright a" label="Copyright Link Color" priority="11" property="color" prefix="#" suffix="" />		
+		<customizer section="copyright" control="colorpicker" std="" id="copyright_link_color_hover" selector="#copyright a:hover" label="Copyright Link Color on Hover" priority="12" property="color" prefix="#" suffix="" />
+		<customizer section="copyright" control="select" std="normal" id="copyright_link_style" selector="#copyright a" label="Copyright Link Style" priority="13" property="font-style" prefix="" suffix="" choices="normal,italic,oblique" />		
+		<customizer section="copyright" control="select" std="normal" id="copyright_link_weight" selector="#copyright a" label="Copyright Link Weight" priority="14" property="font-weight" prefix="" suffix="" choices="normal,bold" />	
+		<customizer section="copyright" control="select" std="none" id="copyright_link_decoration" selector="#copyright a" label="Copyright Link Decoration" priority="15" property="text-decoration" prefix="" suffix="" choices="underline,overline,line-through,blink" />	
+		<customizer section="copyright" control="select" std="none" id="copyright_link_decoration_hover" selector="#copyright a:hover" label="Copyright Link Decoration on Hover" priority="16" property="text-decoration" prefix="" suffix="" choices="underline,overline,line-through,blink" />							
+
+		<!--HEADINGS-->
+		<!--h1-->
+		<customizer section="headings" control="reset_default" std="" id="headings_reset_default" selector="none" label="Reset Default" priority="0" property="none" prefix="" suffix="" />
+		<customizer section="headings" control="font" std="Source Sans Pro" id="headings_h1_font" selector="h1" label="H1 Heading Font" priority="1" property="font-family" prefix="" suffix="" />
+		<customizer section="headings" control="font_variant" std="" id="headings_h1_font_variant" selector="h1" label="H1 Heading Font Variant" priority="2" property="font-weight" prefix="" suffix="" />
+		<customizer section="headings" control="font_subset" std="" id="headings_h1_font_subset" selector="h1" label="H1 Heading Font Subset" priority="3" property="none" prefix="" suffix="" />
+		<customizer section="headings" control="text_size" std="25px" id="headings_h1_text_size" selector="h1" label="H1 Heading Size" priority="4" property="font-size" prefix="" suffix="px" />
+		<customizer section="headings" control="colorpicker" std="ffffff" id="headings_h1_color" selector="h1" label="H1 Heading Color" priority="5" property="color" prefix="#" suffix="" />
+		<customizer section="headings" control="colorpicker" std="ffffff" id="headings_h1_link_color" selector="h1 a" label="H1 Heading with Link Color" priority="6" property="color" prefix="#" suffix="" />		
+		<customizer section="headings" control="colorpicker" std="b45353" id="headings_h1_link_color_hover" selector="h1 a:hover" label="H1 Heading with Link Color on Hover" priority="7" property="color" prefix="#" suffix="" />
+
+		<!--divider-->
+		<customizer section="headings" control="divider" std="" id="headings_h1_divider" selector="none" label="" priority="7" property="none" prefix="" suffix="" />
+
+		<!--h2-->
+		<customizer section="headings" control="font" std="Source Sans Pro" id="headings_h2_font" selector="h2" label="H2 Heading Font" priority="8" property="font-family" prefix="" suffix="" />
+		<customizer section="headings" control="font_variant" std="" id="headings_h2_font_variant" selector="h2" label="H2 Heading Font Variant" priority="9" property="font-weight" prefix="" suffix="" />
+		<customizer section="headings" control="font_subset" std="" id="headings_h2_font_subset" selector="h2" label="H2 Heading Font Subset" priority="10" property="none" prefix="" suffix="" />
+		<customizer section="headings" control="text_size" std="20px" id="headings_h2_text_size" selector="h2" label="H2 Heading Size" priority="11" property="font-size" prefix="" suffix="px" />
+		<customizer section="headings" control="colorpicker" std="ffffff" id="headings_h2_color" selector="h2" label="H2 Heading Color" priority="12" property="color" prefix="#" suffix="" />
+		<customizer section="headings" control="colorpicker" std="ffffff" id="headings_h2_link_color" selector="h2 a" label="H2 Heading with Link Color" priority="13" property="color" prefix="#" suffix="" />		
+		<customizer section="headings" control="colorpicker" std="b45353" id="headings_h2_link_color_hover" selector="h2 a:hover" label="H2 Heading with Link Color on Hover" priority="14" property="color" prefix="#" suffix="" />
+
+		<!--divider-->
+		<customizer section="headings" control="divider" std="" id="headings_h2_divider" selector="none" label="" priority="14" property="none" prefix="" suffix="" />
+
+		<!--h3-->
+		<customizer section="headings" control="font" std="Source Sans Pro" id="headings_h3_font" selector="h3" label="H3 Heading Font" priority="15" property="font-family" prefix="" suffix="" />
+		<customizer section="headings" control="font_variant" std="" id="headings_h3_font_variant" selector="h3" label="H3 Heading Font Variant" priority="16" property="font-weight" prefix="" suffix="" />
+		<customizer section="headings" control="font_subset" std="" id="headings_h3_font_subset" selector="h3" label="H3 Heading Font Subset" priority="17" property="none" prefix="" suffix="" />
+		<customizer section="headings" control="text_size" std="18px" id="headings_h3_text_size" selector="h3" label="H3 Heading Size" priority="18" property="font-size" prefix="" suffix="px" />
+		<customizer section="headings" control="colorpicker" std="ffffff" id="headings_h3_color" selector="h3" label="H3 Heading Color" priority="19" property="color" prefix="#" suffix="" />
+		<customizer section="headings" control="colorpicker" std="ffffff" id="headings_h3_link_color" selector="h3 a" label="H3 Heading with Link Color" priority="20" property="color" prefix="#" suffix="" />		
+		<customizer section="headings" control="colorpicker" std="b45353" id="headings_h3_link_color_hover" selector="h3 a:hover" label="H3 Heading with Link Color on Hover" priority="21" property="color" prefix="#" suffix="" />
+
+		<!--divider-->
+		<customizer section="headings" control="divider" std="" id="headings_h3_divider" selector="none" label="" priority="21" property="none" prefix="" suffix="" />
+
+		<!--h4-->
+		<customizer section="headings" control="font" std="Source Sans Pro" id="headings_h4_font" selector="h4" label="H4 Heading Font" priority="22" property="font-family" prefix="" suffix="" />
+		<customizer section="headings" control="font_variant" std="" id="headings_h4_font_variant" selector="h4" label="H4 Heading Font Variant" priority="23" property="font-weight" prefix="" suffix="" />
+		<customizer section="headings" control="font_subset" std="" id="headings_h4_font_subset" selector="h4" label="H4 Heading Font Subset" priority="24" property="none" prefix="" suffix="" />
+		<customizer section="headings" control="text_size" std="16px" id="headings_h4_text_size" selector="h4" label="H4 Heading Size" priority="25" property="font-size" prefix="" suffix="px" />
+		<customizer section="headings" control="colorpicker" std="ffffff" id="headings_h4_color" selector="h4" label="H4 Heading Color" priority="26" property="color" prefix="#" suffix="" />
+		<customizer section="headings" control="colorpicker" std="ffffff" id="headings_h4_link_color" selector="h4 a" label="H4 Heading with Link Color" priority="27" property="color" prefix="#" suffix="" />		
+		<customizer section="headings" control="colorpicker" std="b45353" id="headings_h4_link_color_hover" selector="h4 a:hover" label="H4 Heading with Link Color on Hover" priority="28" property="color" prefix="#" suffix="" />
+
+		<!--divider-->
+		<customizer section="headings" control="divider" std="" id="headings_h4_divider" selector="none" label="" priority="28" property="none" prefix="" suffix="" />
+
+		<!--h5-->
+		<customizer section="headings" control="font" std="Source Sans Pro" id="headings_h5_font" selector="h5" label="H5 Heading Font" priority="29" property="font-family" prefix="" suffix="" />
+		<customizer section="headings" control="font_variant" std="" id="headings_h5_font_variant" selector="h5" label="H5 Heading Font Variant" priority="30" property="font-weight" prefix="" suffix="" />
+		<customizer section="headings" control="font_subset" std="" id="headings_h5_font_subset" selector="h5" label="H5 Heading Font Subset" priority="31" property="none" prefix="" suffix="" />
+		<customizer section="headings" control="text_size" std="14px" id="headings_h5_text_size" selector="h5" label="H5 Heading Size" priority="32" property="font-size" prefix="" suffix="px" />
+		<customizer section="headings" control="colorpicker" std="ffffff" id="headings_h5_color" selector="h5" label="H5 Heading Color" priority="33" property="color" prefix="#" suffix="" />
+		<customizer section="headings" control="colorpicker" std="ffffff" id="headings_h5_link_color" selector="h5 a" label="H5 Heading with Link Color" priority="34" property="color" prefix="#" suffix="" />		
+		<customizer section="headings" control="colorpicker" std="b45353" id="headings_h5_link_color_hover" selector="h5 a:hover" label="H5 Heading with Link Color on Hover" priority="35" property="color" prefix="#" suffix="" />
+
+		<!--divider-->
+		<customizer section="headings" control="divider" std="" id="headings_h5_divider" selector="none" label="" priority="35" property="none" prefix="" suffix="" />
+
+		<!--h6-->
+		<customizer section="headings" control="font" std="Source Sans Pro" id="headings_h6_font" selector="h6" label="H6 Heading Font" priority="36" property="font-family" prefix="" suffix="" />
+		<customizer section="headings" control="font_variant" std="" id="headings_h6_font_variant" selector="h6" label="H6 Heading Font Variant" priority="37" property="font-weight" prefix="" suffix="" />
+		<customizer section="headings" control="font_subset" std="" id="headings_h6_font_subset" selector="h6" label="H6 Heading Font Subset" priority="38" property="none" prefix="" suffix="" />
+		<customizer section="headings" control="text_size" std="14px" id="headings_h6_text_size" selector="h6" label="H6 Heading Size" priority="39" property="font-size" prefix="" suffix="px" />
+		<customizer section="headings" control="colorpicker" std="ffffff" id="headings_h6_color" selector="h6" label="H6 Heading Color" priority="40" property="color" prefix="#" suffix="" />
+		<customizer section="headings" control="colorpicker" std="ffffff" id="headings_h6_link_color" selector="h6 a" label="H6 Heading with Link Color" priority="41" property="color" prefix="#" suffix="" />		
+		<customizer section="headings" control="colorpicker" std="b45353" id="headings_h6_link_color_hover" selector="h6 a:hover" label="H6 Heading with Link Color on Hover" priority="42" property="color" prefix="#" suffix="" />
+
+		<!--BLOG-->
+		<!--category title-->
+		<customizer section="blog" control="reset_default" std="" id="blog_reset_default" selector="none" label="Reset Default" priority="0" property="none" prefix="" suffix="" />
+		<customizer section="blog" control="font" std="Source Sans Pro" id="blog_category_title_font" selector=".category-blog h1.category-title" label="Blog Category Title Font" priority="2" property="font-family" prefix="" suffix="" />
+		<customizer section="blog" control="font_variant" std="" id="blog_category_title_font_variant" selector=".category-blog h1.category-title" label="Blog Category Title Font Variant" priority="3" property="font-weight" prefix="" suffix="" />
+		<customizer section="blog" control="font_subset" std="" id="blog_category_title_font_subset" selector=".category-blog h1.category-title" label="Blog Category Title Font Subset" priority="4" property="none" prefix="" suffix="" />
+		<customizer section="blog" control="text_size" std="20px" id="blog_category_title_size" selector=".category-blog h1.category-title" label="Blog Category Title Size" priority="5" property="font-size" prefix="" suffix="px" />
+		<customizer section="blog" control="colorpicker" std="ffffff" id="blog_category_title_color" selector=".category-blog h1.category-title" label="Blog Category Title Color" priority="6" property="color" prefix="#" suffix="" />				
+		<customizer section="blog" control="select" std="normal" id="blog_category_title_style" selector=".category-blog h1.category-title" label="Blog Category Style" priority="7" property="font-style" prefix="" suffix="" choices="normal,italic,oblique" />		
+		<customizer section="blog" control="select" std="normal" id="blog_category_title_weight" selector=".category-blog h1.category-title" label="Blog Category Weight" priority="8" property="font-weight" prefix="" suffix="" choices="normal,bold" />	
+		<customizer section="blog" control="select" std="none" id="blog_category_title_decoration" selector=".category-blog h1.category-title" label="Blog Category Decoration" priority="9" property="text-decoration" prefix="" suffix="" choices="underline,overline,line-through,blink" />
+
+		<!--divider-->
+		<customizer section="blog" control="divider" std="" id="blog_category_title_divider" selector="none" label="" priority="9" property="none" prefix="" suffix="" />
+
+		<!--post title-->
+		<customizer section="blog" control="font" std="Source Sans Pro" id="blog_post_title_font" selector=".category-blog h2.entry-title, .category-blog h1.entry-title" label="Blog Post Title Font" priority="10" property="font-family" prefix="" suffix="" />
+		<customizer section="blog" control="font_variant" std="" id="blog_post_title_font_variant" selector=".category-blog h2.entry-title, .category-blog h1.entry-title" label="Blog Post Title Font Variant" priority="11" property="font-weight" prefix="" suffix="" />
+		<customizer section="blog" control="font_subset" std="" id="blog_post_title_font_subset" selector=".category-blog h2.entry-title, .category-blog h1.entry-title" label="Blog Post Title Font Subset" priority="12" property="none" prefix="" suffix="" />
+		<customizer section="blog" control="text_size" std="20px" id="blog_post_title_size" selector=".category-blog h2.entry-title, .category-blog h1.entry-title" label="Blog Post Title Size" priority="13" property="font-size" prefix="" suffix="px" />
+		<customizer section="blog" control="colorpicker" std="ffffff" id="blog_post_title_color" selector=".category-blog h2.entry-title a, .category-blog h2.entry-title" label="Blog Post Title Color" priority="14" property="color" prefix="#" suffix="" />				
+		<customizer section="blog" control="colorpicker" std="b45353" id="blog_post_title_color_hover" selector=".category-blog h2.entry-title a:hover" label="Blog Post Title Color on Hover" priority="15" property="color" prefix="#" suffix="" />
+		<customizer section="blog" control="select" std="normal" id="blog_post_title_style" selector=".category-blog h2.entry-title, .category-blog h1.entry-title" label="Blog Post Title Style" priority="16" property="font-style" prefix="" suffix="" choices="normal,italic,oblique" />		
+		<customizer section="blog" control="select" std="normal" id="blog_post_title_weight" selector=".category-blog h2.entry-title, .category-blog h1.entry-title" label="Blog Post Title Weight" priority="17" property="font-weight" prefix="" suffix="" choices="normal,bold" />	
+		<customizer section="blog" control="select" std="none" id="blog_post_title_decoration" selector=".category-blog h2.entry-title, .category-blog h1.entry-title" label="Blog Post Title Decoration" priority="18" property="text-decoration" prefix="" suffix="" choices="none,underline,overline,line-through,blink" />
+
+		<!--divider-->
+		<customizer section="blog" control="divider" std="" id="blog_post_title_divider" selector="none" label="" priority="21" property="none" prefix="" suffix="" />
+
+		<!--post entry meta-->				
+		<customizer section="blog" control="font" std="Source Sans Pro" id="blog_post_entry_meta_font" selector=".blog .header-entry-meta, .blog .footer-entry-meta" label="Blog Post Entry Meta Font" priority="22" property="font-family" prefix="" suffix="" />
+		<customizer section="blog" control="font_variant" std="" id="blog_post_entry_meta_font_variant" selector=".blog .header-entry-meta, .blog .footer-entry-meta" label="Blog Post Entry Meta Font Variant" priority="23" property="font-weight" prefix="" suffix="" />
+		<customizer section="blog" control="font_subset" std="" id="blog_post_entry_meta_font_subset" selector=".blog .header-entry-meta, .blog .footer-entry-meta" label="Blog Post Entry Meta Font Subset" priority="24" property="none" prefix="" suffix="" />
+		<customizer section="blog" control="text_size" std="14px" id="blog_post_entry_meta_size" selector=".blog .header-entry-meta, .blog .footer-entry-meta" label="Blog Post Entry Meta Size" priority="25" property="font-size" prefix="" suffix="px" />
+		<customizer section="blog" control="colorpicker" std="ffffff" id="blog_post_entry_meta_color" selector=".blog .header-entry-meta, .blog .footer-entry-meta" label="Blog Post Entry Meta Color" priority="26" property="color" prefix="#" suffix="" />				
+		<customizer section="blog" control="colorpicker" std="b45353" id="blog_post_entry_meta_link_color" selector=".blog .header-entry-meta a, .blog .footer-entry-meta a" label="Blog Post Entry Meta with Link Color" priority="27" property="color" prefix="#" suffix="" />
+		<customizer section="blog" control="colorpicker" std="ffffff" id="blog_post_entry_meta_link_color_hover" selector=".blog .header-entry-meta, .blog .footer-entry-meta a:hover, .blog .header-entry-meta, .blog .footer-entry-meta a:hover" label="Blog Post Entry Meta with Link Color on Hover" priority="28" property="color" prefix="#" suffix="" />
+		<customizer section="blog" control="select" std="normal" id="blog_post_entry_meta_link_style" selector=".blog .header-entry-meta, .blog .footer-entry-meta a, .blog .header-entry-meta, .blog .footer-entry-meta a" label="Blog Post Entry Meta Link Style" priority="29" property="font-style" prefix="" suffix="" choices="normal,italic,oblique" />		
+		<customizer section="blog" control="select" std="normal" id="blog_post_entry_meta_link_weight" selector=".blog .header-entry-meta, .blog .footer-entry-meta a, .blog .header-entry-meta, .blog .footer-entry-meta a" label="Blog Post Entry Meta Link Weight" priority="30" property="font-weight" prefix="" suffix="" choices="normal,bold" />			
+		<customizer section="blog" control="select" std="none" id="blog_post_entry_meta_link_decoration" selector=".blog .header-entry-meta, .blog .footer-entry-meta a, .blog .header-entry-meta, .blog .footer-entry-meta a" label="Blog Post Entry Meta with Link Decoration" priority="31" property="text-decoration" prefix="" suffix="" choices="underline,overline,line-through,blink" />		
+		<customizer section="blog" control="select" std="none" id="blog_post_entry_meta_link_decoration_hover" selector=".blog .header-entry-meta, .blog .footer-entry-meta a:hover, .blog .header-entry-meta, .blog .footer-entry-meta a:hover" label="Blog Post Entry Meta with Link Decoration on Hover" priority="32" property="text-decoration" prefix="" suffix="" choices="underline,overline,line-through,blink" />
+
+		<!--divider-->
+		<customizer section="blog" control="divider" std="" id="blog_post_entry_meta_divider" selector="none" label="" priority="33" property="none" prefix="" suffix="" />
+
+		<!--post entry content-->
+		<customizer section="blog" control="font" std="Source Sans Pro" id="blog_post_entry_content_font" selector=".blog .entry-content" label="Blog Post Entry Content Font" priority="34" property="font-family" prefix="" suffix="" />
+		<customizer section="blog" control="font_variant" std="" id="blog_post_entry_content_font_variant" selector=".blog .entry-content" label="Blog Post Entry Content Font Variant" priority="35" property="font-weight" prefix="" suffix="" />
+		<customizer section="blog" control="font_subset" std="" id="blog_post_entry_content_font_subset" selector=".blog .entry-content" label="Blog Post Entry Content Font Subset" priority="36" property="none" prefix="" suffix="" />
+		<customizer section="blog" control="text_size" std="14px" id="blog_post_entry_content_size" selector=".blog .entry-content" label="Blog Post Entry Content Size" priority="37" property="font-size" prefix="" suffix="px" />
+		<customizer section="blog" control="colorpicker" std="ffffff" id="blog_post_entry_content_color" selector=".blog .entry-content" label="Blog Post Entry Content Color" priority="38" property="color" prefix="#" suffix="" />				
+		<customizer section="blog" control="colorpicker" std="b45353" id="blog_post_entry_content_link_color" selector=".blog .entry-content a" label="Blog Post Entry Content Link Color" priority="39" property="color" prefix="#" suffix="" />
+		<customizer section="blog" control="colorpicker" std="ffffff" id="blog_post_entry_content_link_color_hover" selector=".blog .entry-content a:hover" label="Blog Post Entry Content Link Color on Hover" priority="40" property="color" prefix="#" suffix="" />
+		<customizer section="blog" control="select" std="normal" id="blog_post_entry_content_style" selector=".blog .entry-content a" label="Blog Post Entry Content Link Style" priority="41" property="font-style" prefix="" suffix="" choices="normal,italic,oblique" />		
+		<customizer section="blog" control="select" std="normal" id="blog_post_entry_content_weight" selector=".blog .entry-content a" label="Blog Post Entry Content Link Weight" priority="42" property="font-weight" prefix="" suffix="" choices="normal,bold" />		
+		<customizer section="blog" control="select" std="none" id="blog_post_entry_content_link_decoration" selector=".blog .entry-content a" label="Blog Post Entry Content Link Decoration" priority="43" property="text-decoration" prefix="" suffix="" choices="underline,overline,line-through,blink" />		
+		<customizer section="blog" control="select" std="none" id="blog_post_entry_content_link_decoration_hover" selector=".blog .entry-content a:hover" label="Blog Post Entry Content Link Decoration on Hover" priority="44" property="text-decoration" prefix="" suffix="" choices="underline,overline,line-through,blink" />
+
+		<!--PAGE-->
+		<!--page title-->
+		<customizer section="pages" control="reset_default" std="" id="pages_reset_default" selector="none" label="Reset Default" priority="0" property="none" prefix="" suffix="" />	
+		<customizer section="pages" control="font" std="Source Sans Pro" id="page_title_font" selector=".page h1.entry-title" label="Page Title Font" priority="2" property="font-family" prefix="" suffix="" />
+		<customizer section="pages" control="font_variant" std="" id="page_title_font_variant" selector=".page h1.entry-title" label="Page Title Font Variant" priority="3" property="font-weight" prefix="" suffix="" />
+		<customizer section="pages" control="font_subset" std="" id="page_title_font_subset" selector=".page h1.entry-title" label="Page Title Font Subset" priority="4" property="none" prefix="" suffix="" />
+		<customizer section="pages" control="text_size" std="25px" id="page_title_size" selector=".page h1.entry-title" label="Page Title Size" priority="5" property="font-size" prefix="" suffix="px" />
+		<customizer section="pages" control="colorpicker" std="ffffff" id="page_title_color" selector=".page h1.entry-title" label="Page Title Color" priority="6" property="color" prefix="#" suffix="" />				
+		<customizer section="pages" control="select" std="normal" id="page_title_style" selector=".page h1.entry-title" label="Page Title Style" priority="7" property="font-style" prefix="" suffix="" choices="normal,italic,oblique" />		
+		<customizer section="pages" control="select" std="normal" id="page_title_weight" selector=".page h1.entry-title" label="Page Title Weight" priority="8" property="font-weight" prefix="" suffix="" choices="normal,bold" />	
+
+		<!--divider-->
+		<customizer section="pages" control="divider" std="" id="pages_title_divider" selector="none" label="" priority="8" property="none" prefix="" suffix="" />
+
+		<!--page entry content-->
+		<customizer section="pages" control="font" std="Source Sans Pro" id="page_entry_content_font" selector=".page .entry-content" label="Page Entry Content Font" priority="9" property="font-family" prefix="" suffix="" />
+		<customizer section="pages" control="font_variant" std="" id="page_entry_content_font_variant" selector=".page .entry-content" label="Page Entry Content Font Variant" priority="10" property="font-weight" prefix="" suffix="" />
+		<customizer section="pages" control="font_subset" std="" id="page_entry_content_font_subset" selector=".page .entry-content" label="Page Entry Content Font Subset" priority="11" property="none" prefix="" suffix="" />
+		<customizer section="pages" control="text_size" std="14px" id="page_entry_content_size" selector=".page .entry-content" label="Page Entry Content Size" priority="12" property="font-size" prefix="" suffix="px" />
+		<customizer section="pages" control="colorpicker" std="ffffff" id="page_entry_content_color" selector=".page .entry-content" label="Page Entry Content Color" priority="13" property="color" prefix="#" suffix="" />				
+		<customizer section="pages" control="colorpicker" std="b45353" id="page_entry_content_link_color" selector=".page .entry-content a" label="Page Entry Content Link Color" priority="14" property="color" prefix="#" suffix="" />
+		<customizer section="pages" control="colorpicker" std="ffffff" id="page_entry_content_link_color_hover" selector=".page .entry-content a:hover" label="Page Entry Content Link Color on Hover" priority="15" property="color" prefix="#" suffix="" />
+		<customizer section="pages" control="select" std="normal" id="page_entry_content_style" selector=".page .entry-content a" label="Page Entry Link Content Style" priority="16" property="font-style" prefix="" suffix="" choices="normal,italic,oblique" />		
+		<customizer section="pages" control="select" std="normal" id="page_entry_content_weight" selector=".page .entry-content a" label="Page Entry Link Content Weight" priority="17" property="font-weight" prefix="" suffix="" choices="normal,bold" />		
+		<customizer section="pages" control="select" std="none" id="page_entry_content_link_decoration" selector=".page .entry-content a" label="Page Entry Content Link Decoration" priority="18" property="text-decoration" prefix="" suffix="" choices="underline,overline,line-through,blink" />		
+		<customizer section="pages" control="select" std="none" id="page_entry_content_link_decoration_hover" selector=".page .entry-content a:hover" label="Page Entry Content Link Decoration on Hover" priority="19" property="text-decoration" prefix="" suffix="" choices="underline,overline,line-through,blink" />	
+
+		<!--PRODUCTS-->
+		<!--product page title-->
+		<customizer section="products" control="reset_default" std="" id="products_reset_default" selector="none" label="Reset Default" priority="0" property="none" prefix="" suffix="" />
+		<customizer section="products" control="font" std="Source Sans Pro" id="products_page_title_font" selector=".woocommerce-page h1.page-title" label="Products Page Title Font" priority="1" property="font-family" prefix="" suffix="" />
+		<customizer section="products" control="font_variant" std="" id="products_page_title_font_variant" selector=".woocommerce-page h1.page-title" label="Products Page Title Font Variant" priority="2" property="font-weight" prefix="" suffix="" />
+		<customizer section="products" control="font_subset" std="" id="products_page_title_font_subset" selector=".woocommerce-page h1.page-title" label="Products Page Title Font Subset" priority="3" property="none" prefix="" suffix="" />
+		<customizer section="products" control="text_size" std="25px" id="products_page_title_size" selector=".woocommerce-page h1.page-title" label="Products Page Title Size" priority="4" property="font-size" prefix="" suffix="px" />
+		<customizer section="products" control="colorpicker" std="ffffff" id="products_page_title_color" selector=".woocommerce-page h1.page-title" label="Products Page Title Color" priority="5" property="color" prefix="#" suffix="" />				
+		<customizer section="products" control="select" std="normal" id="products_page_title_style" selector=".woocommerce-page h1.page-title" label="Products Page Title Style" priority="6" property="font-style" prefix="" suffix="" choices="normal,italic,oblique" />
+		<customizer section="products" control="select" std="normal" id="products_page_title_weight" selector=".woocommerce-page h1.page-title" label="Products Page Title Weight" priority="7" property="font-weight" prefix="" suffix="" choices="normal,bold" />
+
+		<!--divider-->
+		<customizer section="products" control="divider" std="" id="products_category_title_divider" selector="none" label="" priority="7" property="none" prefix="" suffix="" />
+
+		<!--product title-->
+		<customizer section="products" control="font" std="Source Sans Pro" id="products_title_font" selector="h3.product-title a" label="Products Title Font" priority="8" property="font-family" prefix="" suffix="" />
+		<customizer section="products" control="font_variant" std="" id="products_title_font_variant" selector="h3.product-title a" label="Products Title Font Variant" priority="9" property="font-weight" prefix="" suffix="" />
+		<customizer section="products" control="font_subset" std="" id="products_title_font_subset" selector="h3.product-title a" label="Products Title Font Subset" priority="10" property="none" prefix="" suffix="" />
+		<customizer section="products" control="text_size" std="15px" id="products_title_size" selector="h3.product-title a" label="Products Title Size" priority="11" property="font-size" prefix="" suffix="px" />
+		<customizer section="products" control="colorpicker" std="b45353" id="products_title_color" selector="h3.product-title a" label="Products Title Color" priority="12" property="color" prefix="#" suffix="" />				
+		<customizer section="products" control="select" std="normal" id="products_title_style" selector="h3.product-title a" label="Products Title Style" priority="13" property="font-style" prefix="" suffix="" choices="normal,italic,oblique" />		
+		<customizer section="products" control="select" std="normal" id="products_title_weight" selector="h3.product-title a" label="Products Title Weight" priority="14" property="font-weight" prefix="" suffix="" choices="normal,bold" />
+		<customizer section="products" control="select" std="none" id="products_title_link_decoration" selector="h3.product-title a" label="Products Title with Link Decoration" priority="15" property="text-decoration" prefix="" suffix="" choices="underline,overline,line-through,blink" />		
+		<customizer section="products" control="select" std="none" id="products_title_link_decoration_hover" selector="h3.product-title a:hover" label="Products Title with Link Decoration on Hover" priority="16" property="text-decoration" prefix="" suffix="" choices="underline,overline,line-through,blink" />
+
+		<!--divider-->
+		<customizer section="products" control="divider" std="" id="products_title_font_divider" selector="none" label="" priority="16" property="none" prefix="" suffix="" />
+
+		<!--product detail title-->
+		<customizer section="products" control="font" std="Source Sans Pro" id="products_detail_title_font" selector="h1.product_title" label="Products Detail Title Font" priority="17" property="font-family" prefix="" suffix="" />
+		<customizer section="products" control="font_variant" std="" id="products_detail_title_font_variant" selector="h1.product_title" label="Products Detail Title Font Variant" priority="18" property="font-weight" prefix="" suffix="" />
+		<customizer section="products" control="font_subset" std="" id="products_detail_title_font_subset" selector="h1.product_title" label="Products Detail Title Font Subset" priority="19" property="none" prefix="" suffix="" />
+		<customizer section="products" control="text_size" std="20px" id="products_detail_title_size" selector="h1.product_title" label="Products Detail Title Size" priority="20" property="font-size" prefix="" suffix="px" />
+		<customizer section="products" control="colorpicker" std="ffffff" id="products_detail_title_color" selector="h1.product_title" label="Products Detail Title Color" priority="21" property="color" prefix="#" suffix="" />				
+		<customizer section="products" control="select" std="normal" id="products_detail_title_style" selector="h1.product_title" label="Products Detail Title Style" priority="22" property="font-style" prefix="" suffix="" choices="normal,italic,oblique" />		
+		<customizer section="products" control="select" std="normal" id="products_detail_title_weight" selector="h1.product_title" label="Products Detail Title Weight" priority="23" property="font-weight" prefix="" suffix="" choices="normal,bold" />
+
+		<!--divider-->
+		<customizer section="products" control="divider" std="" id="products_detail_title_divider" selector="none" label="" priority="23" property="none" prefix="" suffix="" />
+
+		<!--products description-->
+		<customizer section="products" control="font" std="Source Sans Pro" id="products_description_font" selector=".product #tab-description" label="Products Description Font" priority="24" property="font-family" prefix="" suffix="" />
+		<customizer section="products" control="font_variant" std="" id="products_description_font_variant" selector=".product #tab-description" label="Products Description Font Variant" priority="25" property="font-weight" prefix="" suffix="" />
+		<customizer section="products" control="font_subset" std="" id="products_description_font_subset" selector=".product #tab-description" label="Products Description Font Subset" priority="26" property="none" prefix="" suffix="" />
+		<customizer section="products" control="text_size" std="14px" id="products_description_size" selector=".product #tab-description" label="Products Description Size" priority="27" property="font-size" prefix="" suffix="px" />
+		<customizer section="products" control="colorpicker" std="ffffff" id="products_description_color" selector=".product #tab-description" label="Products Description Color" priority="28" property="color" prefix="#" suffix="" />				
+		<customizer section="products" control="colorpicker" std="b45353" id="products_description_link_color" selector=".product #tab-description a" label="Products Description Link Color" priority="29" property="color" prefix="#" suffix="" />
+		<customizer section="products" control="colorpicker" std="ffffff" id="products_description_link_color_hover" selector=".product #tab-description a:hover" label="Products Description Link Color on Hover" priority="30" property="color" prefix="#" suffix="" />
+		<customizer section="products" control="select" std="normal" id="products_description_style" selector=".product #tab-description a" label="Products Entry Link Content Style" priority="31" property="font-style" prefix="" suffix="" choices="normal,italic,oblique" />		
+		<customizer section="products" control="select" std="normal" id="products_description_weight" selector=".product #tab-description a" label="Products Entry Link Content Weight" priority="32" property="font-weight" prefix="" suffix="" choices="normal,bold" />		
+		<customizer section="products" control="select" std="none" id="products_description_link_decoration" selector=".product #tab-description a" label="Products Description Link Decoration" priority="33" property="text-decoration" prefix="" suffix="" choices="underline,overline,line-through,blink" />		
+		<customizer section="products" control="select" std="none" id="products_description_link_decoration_hover" selector=".product #tab-description a:hover" label="Products Description Link Decoration on Hover" priority="34" property="text-decoration" prefix="" suffix="" choices="underline,overline,line-through,blink" />	
+		
+		<!--WIDGETS-->
+		<!--widget title-->
+		<customizer section="widgets" control="reset_default" std="" id="widgets_reset_default" selector="none" label="Reset Default" priority="0" property="none" prefix="" suffix="" />
+		<customizer section="widgets" control="colorpicker" std="ffffff" id="widgets_footer_title_color" selector=".footer-widget h3.widget-title" label="Footer Widget Title Color" priority="5" property="color" prefix="#" suffix="" />
+		<customizer section="widgets" control="colorpicker" std="b45353" id="widgets_footer_link_color" selector=".footer-widget a" label="Footer Widget Link Color" priority="6" property="color" prefix="#" suffix="" />
+		<customizer section="widgets" control="colorpicker" std="ffffff" id="widgets_footer_link_color_hover" selector=".footer-widget a:hover" label="Footer Widget Link Color on Hover" priority="7" property="color" prefix="#" suffix="" />
+	</init>
+
+</config>

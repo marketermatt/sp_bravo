@@ -1,0 +1,18 @@
+/*
+Theme Name: Bravo
+Theme URI: http://bravo.splashingpixels.com
+Description: A multi-purpose ecommerce theme for just about anything you want to sell!
+Author: Splashing Pixels
+Author URI: http://splashingpixels.com
+Version: 3.4.1
+Text Domain: sp-theme
+Tags: repsonsive, grid based layout, versatile, e-commerce
+
+License: GNU General Public License v2.0
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+/*-----
+To add in your own CSS styles, visit the theme options general settings->custom CSS styles where you can enter your own custom styles.  Or you can also create a child theme and add your styles in the style.css file.
+----*/
+@import './css/theme-styles.css';
