@@ -1,0 +1,19 @@
+body.login div#login h1 {
+  margin-bottom: 20px;
+}
+body.login div#login h1 a {
+  width: auto !important;
+  max-width: 100%;
+}
+body.login div#login form#loginform {
+  border-radius: 0;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  border: none;
+}
+body.login div#login p#nav a {
+  text-shadow: none;
+}
+body.login div#login p#backtoblog a {
+  text-shadow: none;
+}
