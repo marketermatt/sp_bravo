@@ -237,6 +237,10 @@ div.ls-bulk-actions {
 	button {
 		margin-left: 10px !important;
 	}
+
+	select {
+		width: auto;
+	}
 }
 
 .ls-pagination {
@@ -270,6 +274,15 @@ div.ls-bulk-actions {
 		padding: 8px !important;
 	}
 
+	input.ls-import-file {
+		width: 100%;
+		margin-bottom: 8px;
+	}
+
+	label {
+		line-height: 30px;
+	}
+
 	form.ls-export-form {
 
 		tr:first-child td {
@@ -286,10 +299,6 @@ div.ls-bulk-actions {
 			margin-bottom: 8px;
 			border-radius: 3px;
 			padding: 3px;
-		}
-
-		label {
-			line-height: 30px;
 		}
 
 		tfoot td {

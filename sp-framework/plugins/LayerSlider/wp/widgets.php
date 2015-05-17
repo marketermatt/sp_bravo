@@ -18,7 +18,7 @@ class LayerSlider_Widget extends WP_Widget {
 		$title = apply_filters('widget_title', $instance['title']);
 		$title = !empty($title) ? $before_title . $title . $after_title : $title;
 
-		echo $before_widget, $title, layerslider_init($instance), $after_widget;
+		echo $before_widget, $title, LS_Shortcode::handleShortcode($instance), $after_widget;
 	}
 
 	function update( $new_instance, $old_instance ) {

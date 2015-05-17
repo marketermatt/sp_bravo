@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 /**
  * Class for working with ZIP archives to export
@@ -19,7 +19,7 @@ class LS_ExportUtil {
 	private $zip;
 
 	/**
-	 * A temporary file in /wp-content/uploads/ to manipulate 
+	 * A temporary file in /wp-content/uploads/ to manipulate
 	 * ZIPs on the fly without permanently saving to file system.
 	 */
 	private $file;
@@ -37,7 +37,7 @@ class LS_ExportUtil {
 
 		// Check for ZipArchieve
 		if(class_exists('ZipArchive')) {
-		
+
 			// Temporary directory for file operations
 			$upload_dir = wp_upload_dir();
 			$tmp_dir = $upload_dir['basedir'];
@@ -74,19 +74,19 @@ class LS_ExportUtil {
 	 */
 	public function addImage($files, $folder = '') {
 
-		// Check file 
+		// Check file
 		if(empty($files)) { return false; }
 
 		// Check file type
 		if(!is_array($files)) { $files = array($files); }
 
 		// Check folder
-		$folder = is_string($folder) ? $folder.'/uploads/' : 'uploads/'; 
-	
+		$folder = is_string($folder) ? $folder.'/uploads/' : 'uploads/';
+
 		// Add contents to ZIP
 		foreach($files as $file) {
 			if(!empty($file) && is_string($file)) {
-				$this->zip->addFile($file, 
+				$this->zip->addFile($file,
 					$folder.sanitize_file_name(basename($file))
 				);
 			}
@@ -103,7 +103,7 @@ class LS_ExportUtil {
 	 */
 	public function download() {
 
-		// Close ZIP operations 
+		// Close ZIP operations
 		$this->zip->close();
 
 		// Set headers and to user
@@ -121,7 +121,7 @@ class LS_ExportUtil {
 
 
 	public function getImagesForSlider($data) {
-		
+
 		// Array to hold image URLs
 		$images = array();
 
@@ -146,7 +146,7 @@ class LS_ExportUtil {
 				// Layers
 				if(!empty($slide['sublayers']) && is_array($slide['sublayers'])) {
 					foreach($slide['sublayers'] as $layer) {
-						
+
 						if(!empty($layer['image'])) {
 							$images[] = $layer['image']; }
 					}
@@ -165,10 +165,19 @@ class LS_ExportUtil {
 			$paths = array();
 
 			foreach($urls as $url) {
-				
-				$path = $_SERVER['DOCUMENT_ROOT'] . parse_url($url, PHP_URL_PATH);
-				if(file_exists($path)) { 
-					$paths[] = $path;
+
+				// Get URL relative to the uploads folder
+				$urlPath = parse_url($url, PHP_URL_PATH);
+				$urlPath = explode('/uploads/', $urlPath);
+				$urlPath = $urlPath[1];
+
+				// Get file path
+				$filePath = WP_CONTENT_DIR .'/uploads/'.$urlPath;
+				$filePath = realpath($filePath);
+
+				// Add to array
+				if(file_exists($filePath)) {
+					$paths[] = $filePath;
 				}
 			}
 

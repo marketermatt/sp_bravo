@@ -1,4 +1,3 @@
-@charset "UTF-8";
 html {
   background: white; }
 
@@ -11,6 +10,10 @@ html {
 
 .wrap a {
   outline: none; }
+
+.wrap a:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none; }
 
 #screen-meta-links {
   position: relative;
@@ -285,46 +288,6 @@ html {
   border: 1px solid #999 !important;
   border-radius: 6px !important; }
 
-#contextual-help-wrap .ls-table {
-  width: 100%;
-  border-collapse: collapse;
-  border-spacing: 0px;
-  font-family: Arial, seif;
-  font-size: 13px;
-  background: white;
-  border: 1px solid #CCC; }
-
-#contextual-help-wrap .ls-table thead td {
-  color: #333;
-  text-shadow: 0 1px 1px #FFF;
-  border-right: 1px solid #CCC;
-  border-bottom: 1px solid #CCC;
-  text-align: left;
-  padding: 5px 10px;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 18px;
-  background: #F5F5F5;
-  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJod…EiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-  background: -moz-linear-gradient(top, #f5f5f5 0%, #ebebeb 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #F5F5F5), color-stop(100%, #EBEBEB));
-  background: -webkit-linear-gradient(top, #F5F5F5 0%, #EBEBEB 100%);
-  background: -o-linear-gradient(top, #f5f5f5 0%, #ebebeb 100%);
-  background: -ms-linear-gradient(top, #f5f5f5 0%, #ebebeb 100%);
-  background: linear-gradient(to bottom, #F5F5F5 0%, #EBEBEB 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f5f5', endColorstr='#ebebeb',GradientType=0 ); }
-
-#contextual-help-wrap td {
-  border-bottom: 1px solid #CCC;
-  border-right: 1px solid #CCC;
-  padding: 5px 10px; }
-
-#contextual-help-wrap tbody td:first-child {
-  font-weight: bold !important; }
-
-#contextual-help-wrap .ls-table a {
-  text-decoration: none; }
-
 #ls-screen-options-form input[type="number"] {
   width: 50px; }
 #ls-screen-options-form button {
@@ -511,6 +474,8 @@ div.ls-bulk-actions {
   bottom: -45px; }
   div.ls-bulk-actions button {
     margin-left: 10px !important; }
+  div.ls-bulk-actions select {
+    width: auto; }
 
 .ls-pagination {
   width: 300px;
@@ -531,6 +496,11 @@ div.ls-bulk-actions {
   width: 90%; }
 .ls-import-export-box td {
   padding: 8px !important; }
+.ls-import-export-box input.ls-import-file {
+  width: 100%;
+  margin-bottom: 8px; }
+.ls-import-export-box label {
+  line-height: 30px; }
 .ls-import-export-box form.ls-export-form tr:first-child td {
   padding-top: 8px; }
   .ls-import-export-box form.ls-export-form tr:first-child td:last-child {
@@ -541,8 +511,6 @@ div.ls-bulk-actions {
   margin-bottom: 8px;
   border-radius: 3px;
   padding: 3px; }
-.ls-import-export-box form.ls-export-form label {
-  line-height: 30px; }
 .ls-import-export-box form.ls-export-form tfoot td {
   line-height: 30px; }
   .ls-import-export-box form.ls-export-form tfoot td.available {

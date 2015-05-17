@@ -1,6 +1,6 @@
 <?php
 
-	if(!defined('LS_ROOT_FILE')) { 
+	if(!defined('LS_ROOT_FILE')) {
 		header('HTTP/1.0 403 Forbidden');
 		exit;
 	}
@@ -78,13 +78,13 @@
 </div>
 
 <!-- Share sheet template -->
-<?php 
+<?php
 	$time = time();
 	$installed = get_option('ls-date-installed', 0);
 	$level = get_option('ls-share-displayed', 1);
 
 	switch($level){
-		case 1: 
+		case 1:
 			$time = $time-60*60*24*14;
 			$odds = 100;
 			break;
@@ -104,7 +104,7 @@
 			$odds = 100;
 			break;
 	}
-	
+
 	if($installed && $time > $installed) {
 		if(mt_rand(1, $odds) == 3) {
 			update_option('ls-share-displayed', ++$level);
@@ -127,7 +127,7 @@
 		<a href="http://www.twitter.com/share?url=http%3A%2F%2Fkreaturamedia.com%2Flayerslider-responsive-wordpress-slider-plugin%2F&amp;text=Check%20out%20LayerSlider%20WP%2C%20an%20awesome%20%23slider%20%23plugin%20for%20%23WordPress&amp;via=kreaturamedia" target="_blank">
 			<i class="dashicons dashicons-twitter"></i> Tweet
 		</a>
-		
+
 		<a href="https://plus.google.com/share?url=http://kreaturamedia.com/layerslider-responsive-wordpress-slider-plugin/" target="_blank">
 			<i class="dashicons dashicons-googleplus"></i> +1
 		</a>
@@ -187,11 +187,11 @@
 			<i class="dashicons dashicons-sos"></i>
 			<?php _e('FAQ', 'LayerSlider') ?>
 		</a>
-		<a href="#" class="support right unselectable">
+		<a href="http://support.kreaturamedia.com/docs/layersliderwp/documentation.html" target="_blank" class="support right unselectable">
 			<i class="dashicons dashicons-editor-help"></i>
 			<?php _e('Documentation', 'LayerSlider') ?>
 		</a>
-		<span class="right help"><?php _e('Need help? Try these:', 'LayerSlider') ?></span>
+		<span class="right help"><?php _e('Need help? Try these: ', 'LayerSlider') ?></span>
 		<a href="#" class="clear unselectable"></a>
 	</div>
 
@@ -253,7 +253,7 @@
 									<div class="inner slide-image">
 
 										<?php $background = !empty($layerProps['background']) ? $layerProps['background'] : '' ?>
-										<?php 
+										<?php
 											if($background == '[image-url]') {
 												$src = LS_ROOT_URL.'/static/img/blank.gif';
 											} else {

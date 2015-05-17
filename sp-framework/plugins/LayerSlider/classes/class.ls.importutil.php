@@ -56,7 +56,10 @@ class LS_ImportUtil {
 						foreach(glob($this->tmpDir.'/*', GLOB_ONLYDIR) as $key => $dir) {
 
 							$this->imported = array();
-							$this->uploadMedia($dir);
+
+							if(isset($_POST['import_images'])) {
+								$this->uploadMedia($dir);
+							}
 
 							if(file_exists($dir.'/settings.json')) {
 								$this->addSlider($dir.'/settings.json');

@@ -19,14 +19,13 @@ function layerslider_settings_menu() {
 	global $layerslider_hook;
 
 	$capability = get_option('layerslider_custom_capability', 'manage_options');
-	$icon = version_compare(get_bloginfo('version'), '3.8', '>=') ? 'dashicons-images-alt2' : LS_ROOT_URL.'/static/img/icon_16x16.png'; 
+	$icon = version_compare(get_bloginfo('version'), '3.8', '>=') ? 'dashicons-images-alt2' : LS_ROOT_URL.'/static/img/icon_16x16.png';
 
 	// Add main page
 	$layerslider_hook = add_menu_page(
 		'LayerSlider WP', 'LayerSlider WP',
 		$capability, 'layerslider', 'layerslider_router',
-		$icon,
-		57.777
+		$icon
 	);
 
 	// Add "All Sliders" submenu
@@ -51,6 +50,17 @@ function layerslider_settings_menu() {
 		'layerslider', 'LayerSlider WP Transition Builder', __('Transition Builder', 'LayerSlider'),
 		$capability, 'ls-transition-builder', 'layerslider_router');
 
+}
+
+// Help menu
+add_filter('contextual_help', 'layerslider_help', 10, 3);
+function layerslider_help($contextual_help, $screen_id, $screen) {
+
+	$screen->add_help_tab(array(
+		'id' => 'help',
+		'title' => 'Getting Help',
+		'content' => '<p>Please read our  <a href="http://support.kreaturamedia.com/docs/layersliderwp/documentation.html" target="_blank">Online Documentation</a> carefully, it will likely answer all of your questions.</p><p>You can also check the <a href="http://support.kreaturamedia.com/faq/4/layerslider-for-wordpress/" target="_blank">FAQs</a> for additional information, including our support policies and licensing rules.</p>'
+	));
 }
 
 function layerslider_router() {

@@ -4,7 +4,7 @@
 Plugin Name: LayerSlider WP
 Plugin URI: http://codecanyon.net/user/kreatura/
 Description: LayerSlider is the most advanced responsive WordPress slider plugin with the famous Parallax Effect and over 200 2D & 3D transitions.
-Version: 5.3.2
+Version: 5.4.0
 Author: Kreatura Media
 Author URI: http://kreaturamedia.com/
 Text Domain: LayerSlider
@@ -14,7 +14,7 @@ if(defined('LS_PLUGIN_VERSION') || isset($GLOBALS['lsPluginPath'])) {
 	die('ERROR: It looks like you already have one instance of LayerSlider installed. WordPress cannot activate and handle two instanced at the same time, you need to remove the old version first.');
 }
 
-if(!defined('ABSPATH')) { 
+if(!defined('ABSPATH')) {
 	header('HTTP/1.0 403 Forbidden');
 	exit;
 }
@@ -32,8 +32,8 @@ if(!defined('ABSPATH')) {
 	// Constants
 	define('LS_ROOT_FILE', __FILE__);
 	define('LS_ROOT_PATH', dirname(__FILE__));
-	define('LS_ROOT_URL', FRAMEWORK_URL . 'plugins/LayerSlider');
-	define('LS_PLUGIN_VERSION', '5.3.2');
+	define('LS_ROOT_URL', plugins_url('', __FILE__));
+	define('LS_PLUGIN_VERSION', '5.4.0');
 	define('LS_PLUGIN_SLUG', basename(dirname(__FILE__)));
 	define('LS_PLUGIN_BASE', plugin_basename(__FILE__));
 	define('LS_MARKETPLACE_ID', '1362246');
@@ -50,11 +50,15 @@ if(!defined('ABSPATH')) {
 	include LS_ROOT_PATH.'/wp/hooks.php';
 	include LS_ROOT_PATH.'/wp/widgets.php';
 	include LS_ROOT_PATH.'/wp/compatibility.php';
-	include LS_ROOT_PATH.'/wp/shortcodes.php';
 
 	include LS_ROOT_PATH.'/classes/class.ls.posts.php';
 	include LS_ROOT_PATH.'/classes/class.ls.sliders.php';
 	include LS_ROOT_PATH.'/classes/class.ls.sources.php';
+
+
+	// Register WP shortcode
+	include LS_ROOT_PATH.'/wp/shortcodes.php';
+	LS_Shortcode::registerShortcode();
 
 	// Add demo sliders and skins
 	LS_Sources::addDemoSlider(LS_ROOT_PATH.'/demos/');
@@ -66,18 +70,17 @@ if(!defined('ABSPATH')) {
 	if(is_admin()) {
 		include LS_ROOT_PATH.'/wp/activation.php';
 		include LS_ROOT_PATH.'/wp/tinymce.php';
-		include LS_ROOT_PATH.'/wp/help.php';
-		//include LS_ROOT_PATH.'/wp/notices.php';
+		include LS_ROOT_PATH.'/wp/notices.php';
 		include LS_ROOT_PATH.'/wp/actions.php';
 
 	// Front-end only
 	} else {
-		
+
 	}
 
 
 	// Auto update
-	if(!class_exists('KM_PluginUpdatesV3')) { 
+	if(!class_exists('KM_PluginUpdatesV3')) {
 		require_once LS_ROOT_PATH.'/classes/class.km.autoupdate.plugins.v3.php';
 	}
 
@@ -176,22 +179,26 @@ function layerslider_convert_urls($arr) {
 		$arr['properties']['yourlogo'] = parse_url($arr['properties']['yourlogo'], PHP_URL_PATH);
 	}
 
-	foreach($arr['layers'] as $key => $slide) {
+	if(!empty($arr['layers'])) {
+		foreach($arr['layers'] as $key => $slide) {
 
-		// Layer BG
-		if(strpos($slide['properties']['background'], 'http://') !== false) {
-			$arr['layers'][$key]['properties']['background'] = parse_url($slide['properties']['background'], PHP_URL_PATH);
-		}
+			// Layer BG
+			if(strpos($slide['properties']['background'], 'http://') !== false) {
+				$arr['layers'][$key]['properties']['background'] = parse_url($slide['properties']['background'], PHP_URL_PATH);
+			}
 
-		// Layer Thumb
-		if(strpos($slide['properties']['thumbnail'], 'http://') !== false) {
-			$arr['layers'][$key]['properties']['thumbnail'] = parse_url($slide['properties']['thumbnail'], PHP_URL_PATH);
-		}
+			// Layer Thumb
+			if(strpos($slide['properties']['thumbnail'], 'http://') !== false) {
+				$arr['layers'][$key]['properties']['thumbnail'] = parse_url($slide['properties']['thumbnail'], PHP_URL_PATH);
+			}
 
-		// Image sublayers
-		foreach($slide['sublayers'] as $subkey => $layer) {
-			if($layer['media'] == 'img' && strpos($layer['image'], 'http://') !== false) {
-				$arr['layers'][$key]['sublayers'][$subkey]['image'] = parse_url($layer['image'], PHP_URL_PATH);
+			// Image sublayers
+			if(!empty($slide['sublayers'])) {
+				foreach($slide['sublayers'] as $subkey => $layer) {
+					if($layer['media'] == 'img' && strpos($layer['image'], 'http://') !== false) {
+						$arr['layers'][$key]['sublayers'][$subkey]['image'] = parse_url($layer['image'], PHP_URL_PATH);
+					}
+				}
 			}
 		}
 	}

@@ -1,6 +1,6 @@
 <?php
 
-	if(!defined('LS_ROOT_FILE')) { 
+	if(!defined('LS_ROOT_FILE')) {
 		header('HTTP/1.0 403 Forbidden');
 		exit;
 	}
@@ -170,13 +170,13 @@
 
 
 	<!-- Share sheet template -->
-	<?php 
+	<?php
 		$time = time();
 		$installed = get_option('ls-date-installed', 0);
 		$level = get_option('ls-share-displayed', 1);
 
 		switch($level){
-			case 1: 
+			case 1:
 				$time = $time-60*60*24*14;
 				$odds = 100;
 				break;
@@ -196,7 +196,7 @@
 				$odds = 100;
 				break;
 		}
-		
+
 		if($installed && $time > $installed) {
 			if(mt_rand(1, $odds) == 3) {
 				update_option('ls-share-displayed', ++$level);
@@ -219,7 +219,7 @@
 			<a href="http://www.twitter.com/share?url=http%3A%2F%2Fkreaturamedia.com%2Flayerslider-responsive-wordpress-slider-plugin%2F&amp;text=Check%20out%20LayerSlider%20WP%2C%20an%20awesome%20%23slider%20%23plugin%20for%20%23WordPress&amp;via=kreaturamedia" target="_blank">
 				<i class="dashicons dashicons-twitter"></i> Tweet
 			</a>
-			
+
 			<a href="https://plus.google.com/share?url=http://kreaturamedia.com/layerslider-responsive-wordpress-slider-plugin/" target="_blank">
 				<i class="dashicons dashicons-googleplus"></i> +1
 			</a>
@@ -231,8 +231,8 @@
 
 	<!-- Auto-update revalidation -->
 	<?php if(
-		get_option('layerslider-validated', null) === '1' && 
-		get_option('layerslider-authorized-site', null) === null && 
+		get_option('layerslider-validated', null) === '1' &&
+		get_option('layerslider-authorized-site', null) === null &&
 		get_option('ls-show-revalidation-notice', 1)
 	) : ?>
 	<div class="ls-overlay" data-manualclose="true"></div>
@@ -362,8 +362,11 @@
 					<table data-help="<?php _e('Choose a LayerSlider export file downloaded previously to import your sliders. In order to import from outdated versions, you need to create a file and paste the export code into it. The file needs to have a .json extension.', 'LayerSlider') ?>">
 						<tbody>
 							<tr>
-								<td><input type="file" name="import_file"></td>
-								<td><button class="button"><?php _e('Import', 'LayerSlider') ?></button></td>
+								<td>
+									<input type="file" name="import_file" class="ls-import-file">
+									<label><input type="checkbox" name="import_images" class="checkbox" checked="checked"> <?php _e('Import images (if available)', 'LayerSlider') ?></label>
+									<button class="button"><?php _e('Import', 'LayerSlider') ?></button>
+								</td>
 							</tr>
 						</tbody>
 					</table>
@@ -398,9 +401,9 @@
 						<tfoot>
 							<tr data-help="The PHP ZipArchive extension is needed for exporting/importing images. The plugin will only copy your slider settings if it's not available. In that case please contact with your hosting provider.">
 								<td class="<?php echo class_exists('ZipArchive') ? 'available' : 'notavailable' ?>">
-									<?php echo class_exists('ZipArchive') ? 
-										'ZipArchive is available to import/export images' : 
-										'ZipArchive isn\'t avilable' 
+									<?php echo class_exists('ZipArchive') ?
+										'ZipArchive is available to import/export images' :
+										'ZipArchive isn\'t avilable'
 									?>
 								</td>
 							</tr>
@@ -601,7 +604,7 @@
 		<!-- Google Fonts search bar -->
 		<div class="inner footer">
 			<button type="submit" class="button"><?php _e('Save changes', 'LayerSlider') ?></button>
-			<?php 
+			<?php
 				$scripts = array(
 					'cyrillic' => __('Cyrillic', 'LayerSlider'),
 					'cyrillic-ext' => __('Cyrillic Extended', 'LayerSlider'),
@@ -682,7 +685,7 @@ add_user_meta(get_current_user_id(), 'layerslider_help_wp_pointer', '1'); ?>
 		jQuery('#contextual-help-link-wrap').pointer({
 			pointerClass : 'ls-help-pointer',
 			pointerWidth : 320,
-			content: '<h3><?php _e('The documentation is here', 'LayerSlider') ?></h3><div class="inner"><?php _e('This is a WordPress contextual help menu, it is used to give you fast access to our documentation. Please keep in mind that because this menu is contextual it only shows the relevant information to the page that you are currently viewing. So if you search for something else, you should visit the corresponding page first and then open this help menu.', 'LayerSlider') ?></div>',
+			content: '<h3><?php _e('The documentation is here', 'LayerSlider') ?></h3><div class="inner"><?php _e('Open this help menu to quickly access to our online documentation.', 'LayerSlider') ?></div>',
 			position: {
 				edge : 'top',
 				align : 'right'

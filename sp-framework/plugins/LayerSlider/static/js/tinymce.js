@@ -3,69 +3,66 @@ jQuery(document).ready(function($) {
 	tinymce.create('tinymce.plugins.layerslider_plugin', {
 
 		init : function(ed, url) {
-
-			var self = this;
-
-			// Select slider
-			$(document).on('click', '.ls-pointer li', function() {
-				self.selectSlider(this);
-				self.closePopup();
-			});
-
 			// Close event
-			$(document).on('click', '.ls-overlay', function() {
-				self.closePopup();
-			});
+			$(document).on('click', '.ls-overlay', $.proxy(function() {
+				this.closePopup();
+			}, this));
 
 			// Button props
 			ed.addButton('layerslider_button', {
 				title : 'Add LayerSlider',
 				cmd : 'layerslider_insert_shortcode',
-				onClick : function() { self.openPopup(); }
+				onClick : $.proxy(this.openPopup, this)
 			});
 		},
 
 
-		openPopup : function() {
-
-			// Check if popup is already opened
-			if($('.ls-pointer').length) {
-				return;
-			}
-
-			// Add popup markup
-			$('body').prepend( $('<div>', { 'class' : 'ls-pointer ls-shortcode-pointer ls-box' })
-				.append( $('<span>', { 'class' : 'ls-mce-arrow'} ))
-				.append( $('<h3>', { 'class' : 'header', 'text' : 'Insert LayerSlider to page'} ))
-				.append( $('<ul>', { 'class' : 'inner' } ))
-			);
-
-			// Get popup
+		openPopup : function(e) {
+			// Re-assign "on slider select" event
+			$(document).off('click', '.ls-pointer li').on('click', '.ls-pointer li', $.proxy(function(e) {
+				this.selectSlider($(e.currentTarget));
+				this.closePopup();
+			}, this));
+			
+			// Get the popup
 			var popup = $('.ls-pointer');
+			
+			// If the popup isn't already open, create it and load its content using ajax
+			if(!$('.ls-pointer').length) {
+				
+				// Add popup markup
+				$('body').prepend( $('<div>', { 'class' : 'ls-pointer ls-shortcode-pointer ls-box' })
+					.append( $('<span>', { 'class' : 'ls-mce-arrow'} ))
+					.append( $('<h3>', { 'class' : 'header', 'text' : 'Insert LayerSlider to page'} ))
+					.append( $('<ul>', { 'class' : 'inner' } ))
+				);
 
-			// Get sliders
-			$.getJSON(ajaxurl, { action : 'ls_get_mce_sliders' }, function(data) {
-				for(c = 0; c < data.length; c++) {
-					popup.children('ul').append( $('<li>', { 'data-id' : data[c]['id'], 'data-slug' : data[c]['slug'] })
-						.append( $('<div>', { 'class' : 'preview' })
-							.append( $('<img>', { 'src' : data[c]['preview']}))
-						)
-						.append( $('<div>', { 'class' : 'title', 'text' : data[c]['name'].substr(0, 28) }))
-					);
-				}
-			});
+				// Add overlay
+				$('<div>', { 'class' : 'ls-overlay'}).prependTo('body');
 
-			// Get button props
-			var offsets = $('.mce-i-layerslider_button,.mce_layerslider_button').offset();
+				// Re-assign popup to new container
+				popup = $('.ls-pointer');
+				popup.animate({ marginTop : 0, opacity : 1 }, 150);
 
-			// Show popup
-			$('.ls-pointer').css({
+				// Get sliders
+				$.getJSON(ajaxurl, { action : 'ls_get_mce_sliders' }, function(data) {
+					for(c = 0; c < data.length; c++) {
+						popup.children('ul').append( $('<li>', { 'data-id' : data[c]['id'], 'data-slug' : data[c]['slug'] })
+							.append( $('<div>', { 'class' : 'preview' })
+								.append( $('<img>', { 'src' : data[c]['preview']}))
+							)
+							.append( $('<div>', { 'class' : 'title', 'text' : data[c]['name'].substr(0, 28) }))
+						);
+					}
+				});
+			}
+			
+			// move the popup to the button of the current editor			
+			var offsets = $(e.currentTarget).find('.mce-i-layerslider_button,.mce_layerslider_button').offset();			
+			popup.css({
 				top : offsets.top + 35,
 				left : offsets.left + 12 - popup.outerWidth() / 2
-			}).animate({ marginTop : 0, opacity : 1 }, 150);
-
-			// Add overlay
-			$('<div>', { 'class' : 'ls-overlay'}).prependTo('body');
+			});			
 		},
 
 		searchSlider : function() {
@@ -73,10 +70,10 @@ jQuery(document).ready(function($) {
 		},
 
 		selectSlider : function(el) {
-			if($(el).data('slug') != '') {
-				tinymce.execCommand('mceInsertContent', false, '[layerslider id="'+$(el).data('slug')+'"]');
+			if(el.data('slug') != '') {
+				tinymce.execCommand('mceInsertContent', false, '[layerslider id="'+el.data('slug')+'"]');
 			} else {
-				tinymce.execCommand('mceInsertContent', false, '[layerslider id="'+$(el).data('id')+'"]');
+				tinymce.execCommand('mceInsertContent', false, '[layerslider id="'+el.data('id')+'"]');
 			}
 		},
 

@@ -18,6 +18,11 @@ html {
 	outline: none;
 }
 
+.wrap a:focus {
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
 #screen-meta-links {
 	position: relative;
 	z-index: 10;

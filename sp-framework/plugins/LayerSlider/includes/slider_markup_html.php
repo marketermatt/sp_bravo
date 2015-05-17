@@ -1,14 +1,14 @@
 <?php
 
-if(!defined('LS_ROOT_FILE')) { 
+if(!defined('LS_ROOT_FILE')) {
 	header('HTTP/1.0 403 Forbidden');
 	exit;
 }
 
 // Full-width slider
 if(isset($slides['properties']['props']['forceresponsive'])) {
-	$data[] = '<div class="ls-wp-fullwidth-container" style="height:'.layerslider_check_unit($slides['properties']['props']['height']).';">';
-	$data[] = '<div class="ls-wp-fullwidth-helper">';
+	$output[] = '<div class="ls-wp-fullwidth-container" style="height:'.layerslider_check_unit($slides['properties']['props']['height']).';">';
+	$output[] = '<div class="ls-wp-fullwidth-helper">';
 }
 
 // Get slider style
@@ -30,7 +30,7 @@ if(has_action('layerslider_before_slider_content')) {
 }
 
 // Start of slider container
-$data[] = '<div id="layerslider_'.$id.'" class="ls-wp-container" style="'.implode('', $sliderStyleAttr).'">';
+$output[] = '<div id="'.$sliderID.'" class="ls-wp-container" style="'.implode('', $sliderStyleAttr).'">';
 
 // Add slides
 if(!empty($slider['slides']) && is_array($slider['slides'])) {
@@ -89,7 +89,7 @@ if(!empty($slider['slides']) && is_array($slider['slides'])) {
 
 		// Start of slide
 		$slideAttrs = !empty($slideAttrs) ? 'data-ls="'.$slideAttrs.'"' : '';
-		$data[] = '<div class="ls-slide"'.$slideId.' '.$slideAttrs.'>';
+		$output[] = '<div class="ls-slide"'.$slideId.' '.$slideAttrs.'>';
 
 		// Add slide background
 		if(!empty($slide['props']['background'])) {
@@ -109,19 +109,19 @@ if(!empty($slider['slides']) && is_array($slider['slides'])) {
 					$alt = empty($alt) ? 'Slide background' : $alt;
 				}
 			} else {
-				$src = $slide['props']['background'];
+				$src = do_shortcode($slide['props']['background']);
 				$alt = 'Slide background';
 			}
 
 
-			$data[] = '<img src="'.LS_ROOT_URL.'/static/img/blank.gif" data-src="'.$src.'" class="ls-bg" alt="'.$alt.'" />';
+			$output[] = '<img src="'.$src.'" class="ls-bg" alt="'.$alt.'" />';
 		}
 
 		// Add slide thumbnail
 		if(!isset($slides['properties']['attrs']['thumbnailNavigation']) || $slides['properties']['attrs']['thumbnailNavigation'] != 'disabled') {
 			if(!empty($slide['props']['thumbnail'])) {
 				$src = !empty($slide['props']['thumbnailId']) ? apply_filters('ls_get_image', $slide['props']['thumbnailId'], $slide['props']['thumbnail']) : $slide['props']['thumbnail'];
-				$data[] = '<img src="'.LS_ROOT_URL.'/static/img/blank.gif" data-src="'.$src.'" class="ls-tn" alt="Slide thumbnail" />';
+				$output[] = '<img src="'.$src.'" class="ls-tn" alt="Slide thumbnail" />';
 			}
 		}
 
@@ -215,7 +215,7 @@ if(!empty($slider['slides']) && is_array($slider['slides'])) {
 				if(!empty($layer['props']['styles'])) {
 					$layerStyles = json_decode($layer['props']['styles'], true);
 					if($layerStyles === null) { $layerStyles = json_decode(stripslashes($layer['props']['styles']), true);  }
-					$inner->attr('style', $inner->attr('style') . ls_array_to_attr($layerStyles, 'css')); 
+					$inner->attr('style', $inner->attr('style') . ls_array_to_attr($layerStyles, 'css'));
 				}
 
 				if(empty($layer['props']['wordwrap'])) {
@@ -229,15 +229,14 @@ if(!empty($slider['slides']) && is_array($slider['slides'])) {
 
 				// Image layer
 				if($layer['props']['type'] == 'img') {
-					$inner->attr('src', LS_ROOT_URL.'/static/img/blank.gif');
-					$inner->attr('src', LS_ROOT_URL.'/static/img/blank.gif');
-					
+
 					if($layer['props']['image'] == '[image-url]') {
 						$src = $postContent->getWithFormat($layer['props']['image']);
 					} else {
 						$src = !empty($layer['props']['imageId']) ? apply_filters('ls_get_image', $layer['props']['imageId'], $layer['props']['image']) : $layer['props']['image'];
 					}
-					$inner->attr('data-src', $src);
+
+					$inner->attr('src', $src);
 
 					if(!empty($layer['props']['alt'])) {
 						$inner->attr('alt', $layer['props']['alt']); }
@@ -248,7 +247,7 @@ if(!empty($slider['slides']) && is_array($slider['slides'])) {
 					$inner->html(do_shortcode(__(stripslashes($layer['props']['html']))));
 				}
 
-				$data[] = $el;
+				$output[] = $el;
 			}
 		}
 
@@ -262,21 +261,21 @@ if(!empty($slider['slides']) && is_array($slider['slides'])) {
 				$slide['props']['linkUrl'] = $postContent->getWithFormat($slide['props']['linkUrl']);
 			}
 
-			$data[] = '<a href="'.$slide['props']['linkUrl'].'"'.$target.' class="ls-link"></a>';
+			$output[] = '<a href="'.$slide['props']['linkUrl'].'"'.$target.' class="ls-link"></a>';
 		}
 
 		// End of slide
-		$data[] = '</div>';
+		$output[] = '</div>';
 	}
 }
 
 // End of slider container
-$data[] = '</div>';
+$output[] = '</div>';
 
 // Full-width slider
 if(isset($slides['properties']['props']['forceresponsive'])) {
-	$data[] = '</div>';
-	$data[] = '</div>';
+	$output[] = '</div>';
+	$output[] = '</div>';
 }
 
 // After slider content hook

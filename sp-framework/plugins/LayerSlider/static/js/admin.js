@@ -666,9 +666,9 @@ var LayerSlider = {
 		preview.parent().css({ width : width });
 
 		// Get post content if any
-		var posts = window.lsPostsJSON; 
+		var posts = window.lsPostsJSON;
 		var postOffset = jQuery('input[name="post_offset"]', slide).val();
-		
+
 		if(postOffset == -1) { postOffset = index; }
 		var post = posts[postOffset];
 
@@ -682,7 +682,7 @@ var LayerSlider = {
 		// Set backgrounds
 		preview.css({ backgroundColor : bgColor });
 		preview.css({ backgroundImage : bgImage });
-		
+
 
 		// Get yourLogo
 		var yourLogo = jQuery('input[name="yourlogo"]', $settings).val();
@@ -915,8 +915,8 @@ var LayerSlider = {
 
 				if(jQuery(this).hasClass('ls-insert-media') || jQuery(this).hasClass('ls-mass-upload')) {
 					var multiple = true;
-				} else { 
-					var multiple = false; 
+				} else {
+					var multiple = false;
 				}
 
 				// Media Library params
@@ -1239,7 +1239,7 @@ var LayerSlider = {
 		// Slider settings
 		var width = jQuery('.ls-settings input[name="width"]').val();
 		var height = jQuery('.ls-settings input[name="height"]').val();
-		var posts = window.lsPostsJSON; 
+		var posts = window.lsPostsJSON;
 
 		// Switch between preview and editor
 		layerslider.show();
@@ -1318,7 +1318,7 @@ var LayerSlider = {
 			jQuery(this).find('.ls-sublayers > tr').each(function(layerkey) {
 
 				// Skip sublayer?
-				if( jQuery('input[name="skip"]', this).prop('checked') ) { 
+				if( jQuery('input[name="skip"]', this).prop('checked') ) {
 					jQuery('<div>').appendTo(layer)
 					return true;
 				}
@@ -1370,7 +1370,7 @@ var LayerSlider = {
 				if(type == 'img') {
 					if(image == '') { return true; }
 					if(image == '[image-url]') { image = post['image-url']; }
-	
+
 					sublayer = jQuery('<img src="'+image+'" class="ls-s">').appendTo(layer);
 
 				} else if(type == 'post') {
@@ -1538,7 +1538,7 @@ var LayerSlider = {
 				.append( jQuery('<td class="c"></td>') )
 				.append( jQuery('<td></td>') )
 				.append( jQuery('<td class="c"></td>') )
-				.append( jQuery('<td></td>') 
+				.append( jQuery('<td></td>')
 			);
 
 			// Append transition col 1 & 2
@@ -1782,10 +1782,10 @@ var LayerSlider = {
 		});
 
 		// Save slider
-		jQuery.ajax({ 
-			type: 'post', url: ajaxurl, dataType: 'text', 
-			data: { 
-				action: 'ls_save_slider', 
+		jQuery.ajax({
+			type: 'post', url: ajaxurl, dataType: 'text',
+			data: {
+				action: 'ls_save_slider',
 				id: jQuery('#ls-slider-form input[name="slider_id"]').val(),
 				settings: jQuery('.ls-slider-settings, #ls-post-options').find('input:not(.nochange), select, textarea').serialize(),
 				callbacks: jQuery('.ls-callback-page textarea').serialize(),
@@ -2602,7 +2602,7 @@ jQuery(document).ready(function() {
 		jQuery('.ls-auto-update a.ls-deauthorize').click(function(event) {
 			event.preventDefault();
 			jQuery.get( ajaxurl, jQuery.param({ action: 'layerslider_deauthorize_site'}), function(data) {
-				
+
 				// Parse response and set message
 				var data = jQuery.parseJSON(data);
 
@@ -2650,7 +2650,7 @@ jQuery(document).ready(function() {
 			this.select();
 		});
 
-		// Import 
+		// Import
 		jQuery('form.ls-import-box button').click(function() {
 			jQuery(this).addClass('saving').text('Importing');
 		});
@@ -2694,11 +2694,6 @@ jQuery(document).ready(function() {
 		// Generate preview if user resizes the browser
 		jQuery(window).resize(function(){
 			// LayerSlider.willGeneratePreview( jQuery('.ls-box.active').index() );
-		});
-
-		// Support menu
-		jQuery('#ls-main-nav-bar a.support').click(function(e) {
-			e.preventDefault(); jQuery('#contextual-help-link').click();
 		});
 
 		// Settings: checkboxes
@@ -2789,7 +2784,7 @@ jQuery(document).ready(function() {
 			// Slide options
 			if(jQuery(this).parent().is('.slide-image')) {
 				$target = jQuery(this).closest('.slide-image');
-			
+
 			// Image layer
 			} else if(jQuery(this).parent().parent().is('.ls-image-uploader')) {
 				$target = jQuery(this).closest('.ls-image-uploader');
@@ -2829,7 +2824,7 @@ jQuery(document).ready(function() {
 
 		// Apply on others
 		jQuery(document).on('click', '#ls-transition-window header i:not(:last)', function(e) {
-			
+
 			// Confirmation
 			if(!confirm('Are you sure you want to apply the currently selected transitions on the other slides?')) {
 				return false;
@@ -3034,7 +3029,7 @@ jQuery(document).ready(function() {
 
 		// Transitions gallery
 		jQuery('#ls-transition-window .filters li').click(function() {
-			
+
 			// Update navigation
 			jQuery(this).siblings().removeClass('active');
 			jQuery(this).addClass('active');

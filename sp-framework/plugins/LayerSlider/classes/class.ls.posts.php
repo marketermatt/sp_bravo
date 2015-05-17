@@ -61,7 +61,7 @@ class LS_Posts {
 			$ret[$key]['thumbnail'] = !empty($ret[$key]['thumbnail']) ? $ret[$key]['thumbnail'] : LS_ROOT_URL . '/static/img/blank.gif';
 			$ret[$key]['image'] = '<img src="'.$ret[$key]['thumbnail'].'" alt="">';
 			$ret[$key]['image-url'] = $ret[$key]['thumbnail'];
-			$ret[$key]['title'] = htmlentities(__($val->post_title));
+			$ret[$key]['title'] = htmlspecialchars(__($val->post_title), ENT_COMPAT | ENT_HTML401 | ENT_SUBSTITUTE);
 			$ret[$key]['content'] = wp_strip_all_tags(__($val->post_content));
 			$ret[$key]['excerpt'] = !empty($val->post_excerpt) ? $val->post_excerpt : '';
 			$ret[$key]['author'] = get_userdata($val->post_author)->user_nicename;
@@ -170,7 +170,7 @@ class LS_Posts {
 		// Meta
 		if(stripos($str, '[meta:') !== false) {
 			$matches = array();
-			preg_match_all('/\[meta:\w+\]/', $str, $matches);
+			preg_match_all('/\[meta:\w(?:[-\w]*\w)?]/', $str, $matches);
 			
 			foreach($matches[0] as $match) {
 				$meta = str_replace('[meta:', '', $match);
