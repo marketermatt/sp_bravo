@@ -32,7 +32,7 @@ if(!defined('ABSPATH')) {
 	// Constants
 	define('LS_ROOT_FILE', __FILE__);
 	define('LS_ROOT_PATH', dirname(__FILE__));
-	define('LS_ROOT_URL', plugins_url('', __FILE__));
+	define('LS_ROOT_URL', FRAMEWORK_URL . 'plugins/LayerSlider');
 	define('LS_PLUGIN_VERSION', '5.4.0');
 	define('LS_PLUGIN_SLUG', basename(dirname(__FILE__)));
 	define('LS_PLUGIN_BASE', plugin_basename(__FILE__));
@@ -70,7 +70,7 @@ if(!defined('ABSPATH')) {
 	if(is_admin()) {
 		include LS_ROOT_PATH.'/wp/activation.php';
 		include LS_ROOT_PATH.'/wp/tinymce.php';
-		include LS_ROOT_PATH.'/wp/notices.php';
+		// include LS_ROOT_PATH.'/wp/notices.php';
 		include LS_ROOT_PATH.'/wp/actions.php';
 
 	// Front-end only

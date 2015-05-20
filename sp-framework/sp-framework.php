@@ -30,12 +30,12 @@ require_once( 'inc/core/config.php' );
 require_once( 'inc/core/database.php' );
 
 /////////////////////////////////////////////////////
-// include layerslider version 5.3.2
+// include layerslider version 5.4.0
 // changes made to the plugin
 // changed plugin path - layerslider.php line 35 to define('LS_ROOT_URL', FRAMEWORK_URL . 'plugins/LayerSlider');
 // changed plugin layerslider.php line 67 comment out notice include LS_ROOT_PATH.'/wp/notices.php';
-// changed the menu position to be 57.777 - menus.php line 29 after icon
-// shortcodes.php add if ( sp_hide_on_mobile() ) {return;}
+// changed the menu position to be 57.777 - wp/menus.php line 29 after icon
+// added wp/shortcodes.php add if ( sp_hide_on_mobile() ) {return;} to line 3
 
 /////////////////////////////////////////////////////
 require_once( 'plugins/LayerSlider/layerslider.php' );

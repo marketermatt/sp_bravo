@@ -25,7 +25,8 @@ function layerslider_settings_menu() {
 	$layerslider_hook = add_menu_page(
 		'LayerSlider WP', 'LayerSlider WP',
 		$capability, 'layerslider', 'layerslider_router',
-		$icon
+		$icon,
+		57.777
 	);
 
 	// Add "All Sliders" submenu

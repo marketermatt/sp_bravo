@@ -1,6 +1,6 @@
 <?php
 
-
+if ( sp_hide_on_mobile() ) {return;}
 function layerslider($id = 0, $filters = '') {
 	echo LS_Shortcode::handleShortcode(array('id' => $id, 'filters' => $filters));
 }

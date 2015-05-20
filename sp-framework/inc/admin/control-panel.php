@@ -105,7 +105,7 @@ function sp_panel() {
                 <div id="general" class="panel sp-sub-tabs clearfix">
                 	<h2 class="panel-title clear"><?php _e( 'General Settings', 'sp-theme' ); ?><a href="#" title="<?php _e( 'Toggle Open/Close All Sections', 'sp-theme' ); ?>" class="slide-toggle">[ + ]</a></h2>
                 	<div class="side-nav-bg"></div>
-                	<div class="side-nav">
+                	<div class="bravo-side-nav">
 
                 		<ul class="tabs">
                     		<?php 
