@@ -381,7 +381,7 @@ class API_Manager_theme_Example {
 		<?php if ( ! current_user_can( 'manage_options' ) ) return; ?>
 		<?php if ( isset( $_GET['page'] ) && 'api_manager_theme_bravo_dashboard' == $_GET['page'] ) return; ?>
 		<div id="message" class="error">
-			<p><?php printf( __( 'The API Manager Theme Example API License Key has not been activated, so the theme is inactive! %sClick here%s to activate the license key and the theme.', 'api-manager-example' ), '<a href="' . esc_url( admin_url( 'options-general.php?page=api_manager_theme_bravo_dashboard' ) ) . '">', '</a>' ); ?></p>
+			<p><?php printf( __( 'The API Manager Theme Example API License Key has not been activated, so the theme is inactive! %sClick here%s to activate the license key and the theme.', 'api-manager-example' ), '<a href="' . esc_url( admin_url( 'index.php?page=api_manager_theme_bravo_dashboard' ) ) . '">', '</a>' ); ?></p>
 		</div>
 		<?php
 	}

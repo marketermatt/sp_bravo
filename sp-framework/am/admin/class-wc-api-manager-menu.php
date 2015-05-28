@@ -28,9 +28,13 @@ class API_Manager_Example_theme_MENU {
 	// Add option page menu
 	public function add_menu() {
 
-		$page = add_options_page( __( AMET()->ame_settings_menu_title, AMET()->text_domain ), __( AMET()->ame_settings_menu_title, AMET()->text_domain ),
+		/*$page = add_options_page( __( AMET()->ame_settings_menu_title, AMET()->text_domain ), __( AMET()->ame_settings_menu_title, AMET()->text_domain ),
 						'manage_options', AMET()->ame_activation_tab_key, array( $this, 'config_page')
-		);
+		);*/
+		
+		$page = add_submenu_page( 'index.php', __( AMET()->ame_settings_menu_title), __( AMET()->ame_settings_menu_title), 'manage_options', AMET()->ame_activation_tab_key, array( $this, 'config_page') ); 
+		
+		
 		add_action( 'admin_print_styles-' . $page, array( $this, 'css_scripts' ) );
 	}
 
