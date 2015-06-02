@@ -12,17 +12,22 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-class Api_Manager_theme_Example_Key {
+class Api_Manager_theme_Bravo_Key {
 
 	// API Key URL
 	public function create_software_api_url( $args ) {
+	
+		//$api_url = add_query_arg( 'wc-api', 'am-software-api', 'http://splashingpixels.com' );
 		
-		//$api_url = add_query_arg( 'wc-api', 'am-software-api', AMET()->upgrade_url );
+		  $pieces = parse_url(site_url());
+		  $domain = isset($pieces['host']) ? $pieces['host'] : '';
+		  if (preg_match('/(?P<domain>[a-z0-9][a-z0-9\-]{1,63}\.[a-z\.]{2,6})$/i', $domain, $m)) {
+			$site_url = $m['domain'];
+		  }
+						
+		$api_url = add_query_arg( 'wc-api', 'am-software-api', "$site_url");
 		
-		$site_url = $_SERVER['HTTP_HOST'];
-		
-		$api_url = add_query_arg( 'wc-api', 'am-software-api', $site_url );
-		
+			
 		return $api_url . '&' . http_build_query( $args );
 	}
 
@@ -40,15 +45,8 @@ class Api_Manager_theme_Example_Key {
 				
 		$target_url = esc_url_raw( $this->create_software_api_url( $args ) ); 
 		
-		/* print_r($target_url);
-		die("okoko");  */
-
 		$request = wp_remote_get( $target_url );
 		
-		
-
-		//$request = wp_remote_post( AMET()->upgrade_url . 'wc-api/am-software-api/', array( 'body' => $args ) );
-
 		if( is_wp_error( $request ) || wp_remote_retrieve_response_code( $request ) != 200 ) {
 		// Request failed
 			return false;

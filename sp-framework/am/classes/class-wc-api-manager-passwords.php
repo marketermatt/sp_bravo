@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
  *
  */
 
-class API_Manager_Example_theme_Password_Management {
+class API_Manager_Bravo_theme_Password_Management {
 
 	private function rand( $min = 0, $max = 0 ) {
 		global $rnd_value;
@@ -40,7 +40,7 @@ class API_Manager_Example_theme_Password_Management {
 
 		$value = abs(hexdec($value));
 
-		// Some misconfigured 32bit environments (Entropy PHP, for example) truncate integers larger than PHP_INT_MAX to PHP_INT_MAX rather than overflowing them to floats.
+		// Some misconfigured 32bit environments (Entropy PHP, for bravo) truncate integers larger than PHP_INT_MAX to PHP_INT_MAX rather than overflowing them to floats.
 		$max_random_number = 3000000000 === 2147483647 ? (float) "4294967295" : 4294967295; // 4294967295 = 0xffffffff
 
 		// Reduce the value to be within the min - max range

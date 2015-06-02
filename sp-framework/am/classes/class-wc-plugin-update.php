@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
  *
  */
 
-class API_Manager_Example_theme_Update_API_Check {
+class API_Manager_Bravo_theme_Update_API_Check {
 
 	/**
 	 * @var The single instance of the class
