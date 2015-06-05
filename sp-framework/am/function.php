@@ -161,7 +161,7 @@ class API_Manager_theme_Bravo {
 			$this->ame_deactivate_checkbox 			= 'am_deactivate_bravo_checkbox';
 			$this->ame_activation_tab_key 			= 'api_manager_theme_bravo_dashboard';
 			$this->ame_deactivation_tab_key 		= 'api_manager_theme_bravo_deactivation';
-			$this->ame_settings_menu_title 			= 'AM Theme Bravo';
+			$this->ame_settings_menu_title 			= 'SP Theme Bravo';
 			$this->ame_settings_title 				= 'API Manager Theme Bravo';
 			$this->ame_menu_tab_activation_title 	= __( 'License Activation', 'api-manager-bravo' );
 			$this->ame_menu_tab_deactivation_title 	= __( 'License Deactivation', 'api-manager-bravo' );
