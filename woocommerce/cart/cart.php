@@ -163,8 +163,6 @@ do_action( 'woocommerce_before_cart' );
 
 			<?php do_action( 'woocommerce_cart_collaterals' ); ?>
 
-			<?php woocommerce_cart_totals(); ?>
-
 			<form action="<?php echo esc_url( WC()->cart->get_cart_url() ); ?>" method="post">
 				
 				<?php do_action( 'woocommerce_cart_actions' ); ?>
