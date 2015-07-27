@@ -24,6 +24,7 @@
 					<module title="Navigation Scroll Follow" desc="Turn on to enable the navigation section to always be visible on the screen even when scrolling down the page." id="navigation_scroll_follow" std="on" type="radio_module" option="on,off" />
 
 					<module />
+					<module title="Top nav left content" desc="Enter any text to show in top nav left side" id="top_nav_left_content" std="Contact us 888.888.8888" type="text_module" /> 
 
 				</wrapper>
 

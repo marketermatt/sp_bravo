@@ -1111,3 +1111,21 @@ function sp_footer_phone_number_html() {
 	return $output;
 }
 endif;
+
+if ( ! function_exists( 'sp_top_bar_left_content' ) ) :
+/**
+ * Function that displays the phone number on header
+ *
+ * @access public
+ * @since 3.0
+ * @return mixed html $output
+ */	
+function sp_top_bar_left_content() {
+
+	$output = '';
+
+	$html = sp_get_option( 'top_nav_left_content' );
+	
+	return $html;
+}
+endif;

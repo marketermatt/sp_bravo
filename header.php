@@ -40,7 +40,9 @@ endif;
 					<div class="row">
 						<div class="<?php echo sp_column_css( '', '', '', '6' ); ?>">
 							<?php sp_get_menu( 'top-bar-menu' ); ?>
-							<?php do_action( 'sp_top_bar_left_content' ); ?>
+							<div class="left-content">
+							<?php echo sp_top_bar_left_content(); ?>
+							</div><!--close .left-content-->
 						</div><!--close .column-->
 
 						<div class="header-search-column <?php echo sp_column_css( '12', '12', '', '6' ); ?>">
