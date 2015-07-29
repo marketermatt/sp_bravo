@@ -19,6 +19,7 @@ class Api_Manager_theme_Bravo_Key {
 	
 		//$api_url = add_query_arg( 'wc-api', 'am-software-api', 'http://splashingpixels.com' );
 		
+								
 		$api_url = add_query_arg( 'wc-api', 'am-software-api', "http://splashingpixels.com");
 		
 			
@@ -41,14 +42,21 @@ class Api_Manager_theme_Bravo_Key {
 		
 		$request = wp_remote_get( $target_url );
 		
+		/* print_r($target_url);
+		die("okok");  */ 
+		
 		if( is_wp_error( $request ) || wp_remote_retrieve_response_code( $request ) != 200 ) {
 		// Request failed
 			return false;
 		}
 
 		$response = wp_remote_retrieve_body( $request );
-
-		return $response;
+		/* print_r($response);
+		die('ok11'); */
+ 
+		$response_filtered = ltrim($response, '0');
+				
+		return $response_filtered;
 	}
 
 	public function deactivate( $args ) {
