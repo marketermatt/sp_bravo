@@ -100,14 +100,6 @@ function sp_panel() {
                         ?>
                         <li class="help"><a href="#help" title="<?php esc_attr_e( 'Help', 'sp-theme' ); ?>"><?php _e( 'HELP?', 'sp-theme' ); ?><br /><span><?php _e( 'faq', 'sp-theme' ); ?></span></a></li>
 						
-					<div  style="float:left; margin:0px;">
-					<ul class="tabs">
-					<li class="License">
-					<a href="<?php echo esc_url( admin_url( 'index.php?page=api_manager_theme_bravo_dashboard' ) );?>" title="<?php esc_attr_e( 'License', 'sp-theme' ); ?>"><?php _e( 'License', 'sp-theme' ); ?></a>
-					</li>
-					</ul>
-					</div>
-						
                     </ul>
 					
                 </div><!--close .top-nav-->
