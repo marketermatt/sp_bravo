@@ -119,7 +119,7 @@ function sp_social_media_profile_icons() {
 	$output = '';
 	$buttons = array();
 
-	$target = apply_filters( 'sp_social_media_profile_icons_open_target', '_self' );
+	$target = apply_filters( 'sp_social_media_profile_icons_open_target', '_blank' );
 
 	$output .= '<ul class="social-media-profile-buttons">' . PHP_EOL;	
 	
