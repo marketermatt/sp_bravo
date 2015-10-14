@@ -72,7 +72,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<?php
 			// get saved values
 			$image_upload = sp_get_option( 'checkout_secured_image' );
-			$ssl_seal = sp_get_option( 'checkout_secured_code' );
+			$ssl_seal = sp_get_option( 'checkout_secured_code' );			 
+			$show_ssl_seal = sp_get_option( 'checkout_show_ssl' );
+			if($show_ssl_seal=='yes')
+			{
 
 			if ( isset( $ssl_seal ) && ! empty( $ssl_seal ) ) {
 			?>
@@ -93,6 +96,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 					</div><!--close .checkout-ssl-seal-->
 			<?php
 			}
+			} // if closed 
 			?>
 		</div><!--close .column-->
 

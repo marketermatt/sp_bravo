@@ -596,6 +596,8 @@
 					<module title="Upload SSL Image" desc="Upload the SSL image provided by your SSL provider.  Or you can paste the script below." id="checkout_secured_image" std="" type="upload_module" width="150" height="150" />
 					
 					<module title="SSL Code" desc="Paste the script code provided by your SSL provider to display the secured image/icon.  Take note that this will take precedence over the uploaded SSL image." id="checkout_secured_code" std="" type="textarea_module" />
+					
+					<module title="Show SSL Certificate" desc="show SSL certificate on checkput page " id="checkout_show_ssl" type="radio_module" option="yes,no" />
 
 				</wrapper>
 
