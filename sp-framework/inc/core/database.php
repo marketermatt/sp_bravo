@@ -19,7 +19,7 @@ global $sptheme_config, $spdata;
  * @return array $config the array of default settings
  */
 function _sp_get_theme_config() {
-	$config = get_transient( THEME_SHORTNAME . 'config' );
+	//$config = get_transient( THEME_SHORTNAME . 'config' );
 
 	// put config into transient/cache for faster performance
 	if ( false === $config || empty( $config ) || $config === NULL || ! isset( $config['config'] ) ) {
@@ -29,8 +29,9 @@ function _sp_get_theme_config() {
 		$config	= wp_remote_retrieve_body( $file );
 		*/
 
-		$config = file_get_contents( get_template_directory() . '/theme-config.xml', true );
+		$config = file_get_contents( get_template_directory_uri() . '/theme-config.xml', true );
 		$config	= sp_xml2array( $config );
+		
 
 		// check DEV mode
 		if ( SP_DEV === false )
@@ -40,6 +41,7 @@ function _sp_get_theme_config() {
 	$config	= $config['config'];
   
 	return $config;
+	//return get_template_directory_uri() . '/theme-config.xml';
 }
 
 $sptheme_config = _sp_get_theme_config();

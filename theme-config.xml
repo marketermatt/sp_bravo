@@ -523,7 +523,10 @@
 					<module title="Show Social Share Icons" desc="Turning this on will show social share icons for your products.  This affects single product page only." id="show_product_social_share_icons" std="on" type="radio_module" option="on,off" />
 
 					<module title="Enable Add to Cart Button - Product List" desc="Turning this on will show add to cart button on product list." id="show_product_list_add_to_cart" std="on" type="radio_module" option="on,off" />
-
+					
+					<module title="Disable lightbox from single Product Page" desc="Turning this off will lightbox from single Product Page." id="disable_lightbox_single_product" std="on" type="radio_module" option="on,off" />
+					
+					
 				</wrapper>
 				
 				<wrapper title="Related, Up Sale and Cross Sale Products">

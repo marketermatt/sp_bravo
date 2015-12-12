@@ -82,6 +82,9 @@ function _sp_scripts_styles() {
 
 	// check float nav
 	$float_nav =  sp_get_option( 'navigation_scroll_follow', 'is', 'on' ) ? 'on' : 'off';
+	
+	// disable lightbox
+	$disable_lightbox_single_product =  sp_get_option( 'disable_lightbox_single_product', 'is', 'on' ) ? 'on' : 'off';
 
 	// check site layout boxed or full
 	$site_layout = get_theme_mod( 'site_layout' );
@@ -116,7 +119,8 @@ function _sp_scripts_styles() {
 		'confirm_password_msg'				=> __( 'Password does not match.', 'sp-theme' ),
 		'contact_form_please_select'		=> apply_filters( 'sp_contact_form_please_select_text', __( '--Please Select--', 'sp-theme' ) ),
 		'float_nav'							=> $float_nav,
-		'site_layout'						=> $site_layout
+		'site_layout'						=> $site_layout,
+		'disable_lightbox_single_product' => $disable_lightbox_single_product
 	);
 	
 	wp_localize_script( apply_filters( 'sp-localization', 'theme_js' ), 'sp_theme', $localized_vars );
