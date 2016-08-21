@@ -1,4 +1,8 @@
 <pre>
+{3.4.9} - 8/22/16
+Update -  updated all woocomerce template to latest version
+
+
 {3.4.1} - 6/1/15
 Fix - Site General tabs conflicts with WAT plugin on theme backend
 Update - LayerSlider 5.4.0
